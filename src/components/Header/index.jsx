@@ -10,11 +10,10 @@ export default function Header({ title, slogan }) {
     return (
         <div className="container">
             <div className={styles.header}>
-                <div className={styles.headerWwrap}>
-
+                
                     <Link to="/">
                         <h1 className={styles.headerTitle}>
-                            {title}
+                            Creation Shop
                         </h1>
                     </Link>
 
@@ -24,12 +23,6 @@ export default function Header({ title, slogan }) {
                         onClick={() => setIsOnTouch(!isOnTouch)}
                         isOnTouch={isOnTouch}
                     />
-
-                </div>
-
-
-
-
             </div>
         </div>
 

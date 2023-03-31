@@ -1,20 +1,16 @@
 import 'antd/dist/reset.css';
 import './App.css';
-import { Provider } from "react-redux";
-import Router from './Router';
-import { persistor, store } from './redux/store';
-import { PersistGate } from 'redux-persist/integration/react';
-
+import { ConfigProvider } from 'antd';
+import Home from './pages/Home';
+import Category from './pages/Category';
+import Comission from './pages/Comission';
+import theme from './theme';
 function App() {
-  const [count, setCount] = useState(0)
+  <ConfigProvider theme={theme} >
 
-  return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <Router />
-      </PersistGate>
-    </Provider>
-  )
+      <Home />
+
+  </ConfigProvider>
 }
 
 export default App

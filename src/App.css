@@ -10,10 +10,18 @@
   }
 }
 
+@media (min-width: 1600px) {
+  .container {
+    width: 1500px;
+  }
+}
+
 /* body */
 body {
   font-size: 16px;
   line-height: 1.6;
+  background-color: #111828;
+  color: white;
 }
 
 /* Layout */
