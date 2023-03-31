@@ -7,15 +7,15 @@ export default function NavBar({ open, onClose }) {
 
     const NavBarContent = () => (
         <>
-            <Link to="/Home.jsx"
+            <Link to={`/Home`}
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 首頁
             </Link>
-            <Link to="/Order.jsx"
+            <Link to={`/Order`}
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 訂單
             </Link>
-            <Link to="/Collection.jsx"
+            <Link to={`/Collection`}
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 收藏
             </Link>   

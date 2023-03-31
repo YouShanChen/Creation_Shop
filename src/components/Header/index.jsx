@@ -4,7 +4,7 @@ import NavBar from "../NavBar";
 import styles from "./header.module.css";
 import HamburgerMenu from "../HamburgerMenu"
 
-export default function Header({ title, slogan }) {
+export default function Header({ title }) {
     const [isOnTouch, setIsOnTouch] = useState(false);
 
     return (
@@ -13,7 +13,7 @@ export default function Header({ title, slogan }) {
                 
                     <Link to="/">
                         <h1 className={styles.headerTitle}>
-                            Creation Shop
+                            {title}
                         </h1>
                     </Link>
 

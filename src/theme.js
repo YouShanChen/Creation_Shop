@@ -1,10 +1,10 @@
 import { theme } from "antd";
 
-const Theme = {
+const darkTheme = {
     algorithm: theme.darkAlgorithm,
     token: {
       colorPrimary: "#1677ff",
-      colorBgBase	: "#222222",
+      colorBgBase	: "#111828",
       colorTextBase: "#ffffff",
       colorTextFooter: "#ffffff",
       colorBgFooter: "#000000",
@@ -17,4 +17,4 @@ const Theme = {
     },
   };
 
-  export { Theme };
+  export { darkTheme } ;

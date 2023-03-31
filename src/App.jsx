@@ -2,15 +2,17 @@ import 'antd/dist/reset.css';
 import './App.css';
 import { ConfigProvider } from 'antd';
 import Home from './pages/Home';
-import Category from './pages/Category';
-import Comission from './pages/Comission';
-import theme from './theme';
+import { darkTheme } from './theme';
 function App() {
-  <ConfigProvider theme={theme} >
+  const theme = darkTheme;
+  return (
+    <ConfigProvider theme={theme} >
 
       <Home />
 
-  </ConfigProvider>
+    </ConfigProvider>
+  )
+
 }
 
-export default App
+export default App;
