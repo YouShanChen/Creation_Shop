@@ -1,3 +1,20 @@
-.box{
-    margin:1rem;
+.box {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.tagTitle {
+    background-color: rgba(0, 255, 255, 0.76);
+    font-size: 2rem;
+    align-self: center;
+    padding:0 1rem;
+}
+
+.tagItem {
+    padding: 1rem 0;
+    text-align: center;
+    background-color: aqua;
+    border-radius: 3rem;
+    font-size: 1.4rem;
 }

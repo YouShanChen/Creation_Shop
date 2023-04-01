@@ -28,7 +28,7 @@ export default function NavBar({ open, onClose }) {
                 <NavBarContent />
             </div>
             <Drawer 
-                title="CATEGORY" 
+                title="Creation Shop" 
                 placement="left" 
                 onClose={onClose} 
                 open={open} 

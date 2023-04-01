@@ -19,7 +19,7 @@ export default function Header({ title }) {
                     />
 
             </div>
-            <NavBar open={isOnTouch} onClose={() => setIsOnTouch(false)} />
+            
         </div>
 
     );

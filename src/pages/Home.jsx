@@ -2,7 +2,7 @@
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-
+import TagList from "../components/TagList"
 
 function Home() {
 
@@ -12,7 +12,9 @@ function Home() {
         className="layoutHeader"
         title="Creation Shop"
       />
-      <div className="layout content"></div>
+      <div className="layoutContent">
+        <TagList />
+      </div>
       <Footer className="layoutFooter" />
     </div>
   );
