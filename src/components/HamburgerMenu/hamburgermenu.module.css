@@ -11,7 +11,7 @@
     transition: all 0.25s linear;
   }
   
-  @media (min-width: 768px) {
+  @media (min-width: 1600px) {
     .showMobile {
       display: none;
     }
@@ -31,41 +31,74 @@
   }
   
   .hamMenuBar1 {
-    composes: baseMenuBar;
+    display: inline-block;
+    position: relative;
+    background-color: #8183ff;
+    width: 24px;
+    height: 3px;
     top: 16px;
     transition: all 0.25s linear;
     transform: rotate(-4deg);
   }
   
   .hamMenuBar2 {
-    composes: baseMenuBar;
+    display: inline-block;
+    position: relative;
+    background-color: #8183ff;
+    width: 24px;
+    height: 3px;
     transition: all 0.25s linear;
     transform: rotate(2deg);
   }
   
   .hamMenuBar3 {
-    composes: baseMenuBar;
+    display: inline-block;
+    position: relative;
+    background-color: #8183ff;
+    width: 24px;
+    height: 3px;
     bottom: 16px;
     transition: all 0.25s linear;
     transform: rotate(-2deg);
   }
   
   .hamMenuBar1_Touch {
-    composes: hamMenuBar1;
+    display: inline-block;
+    position: relative;
+    background-color: #8183ff;
+
+    height: 3px;
+
+    transition: all 0.25s linear;
+    transform: rotate(-4deg);
     width: 30px;
     top: 16px;
     opacity: 0;
   }
   
   .hamMenuBar2_Touch {
-    composes: hamMenuBar2;
+    display: inline-block;
+    position: relative;
+    background-color: #8183ff;
+
+    height: 3px;
+    transition: all 0.25s linear;
+
     width: 30px;
     opacity: 1;
     transform: rotate(45deg);
   }
   
   .hamMenuBar3_Touch {
-    composes: hamMenuBar3;
+    display: inline-block;
+    position: relative;
+    background-color: #8183ff;
+
+    height: 3px;
+
+    transition: all 0.25s linear;
+
+
     width: 30px;
     bottom: 25px;
     opacity: 1;

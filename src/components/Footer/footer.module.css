@@ -1,0 +1,28 @@
+.footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 0 1rem;
+
+   
+}
+
+
+
+.footerLink {
+   text-decoration: none;
+}
+
+.footerIcon {
+   background-color: aliceblue;
+   width: 3rem;
+
+   border-radius: 0.25rem;
+}
+
+
+.copyRight {
+   color: white;
+   opacity: 0.6;
+   text-align: center;
+}

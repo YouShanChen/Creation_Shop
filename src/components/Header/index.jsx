@@ -1,29 +1,25 @@
 import { useState } from "react";
-import Link from "../Link"
-import NavBar from "../NavBar";
 import styles from "./header.module.css";
-import HamburgerMenu from "../HamburgerMenu"
+import NavBar from "../NavBar";
+import HamburgerMenu from "../HamburgerMenu";
 
 export default function Header({ title }) {
-    const [isOnTouch, setIsOnTouch] = useState(false);
 
+    const [isOnTouch, setIsOnTouch] = useState(false);
     return (
         <div className="container">
             <div className={styles.header}>
+                <h1 className={styles.headerTitle}>
+                    {title}
+                </h1>
                 
-                    <Link to="/">
-                        <h1 className={styles.headerTitle}>
-                            {title}
-                        </h1>
-                    </Link>
-
-                    <NavBar open={isOnTouch} onClose={() => setIsOnTouch(false)} />
-                    
-                    <HamburgerMenu
+                <HamburgerMenu
                         onClick={() => setIsOnTouch(!isOnTouch)}
                         isOnTouch={isOnTouch}
                     />
+
             </div>
+            <NavBar open={isOnTouch} onClose={() => setIsOnTouch(false)} />
         </div>
 
     );

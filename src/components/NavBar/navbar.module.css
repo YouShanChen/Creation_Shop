@@ -31,11 +31,18 @@
   }
   
   .navItemActive {
-    composes: navItem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    color: white;
+
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
     opacity: 1;
   }
   
-  @media (min-width: 1500px) {
+  @media (min-width: 1600px) {
     .navBar {
       display: flex;
     }

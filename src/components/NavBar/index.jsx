@@ -1,24 +1,24 @@
-
+import NavLink from '../NavLink';
 import { Drawer } from 'antd';
-
 import styles from './navbar.module.css';
 
 export default function NavBar({ open, onClose }) {
 
     const NavBarContent = () => (
         <>
-            <Link to={`/Home`}
+            <NavLink to="/"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 首頁
-            </Link>
-            <Link to={`/Order`}
+            </NavLink>
+            <NavLink to="/"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 訂單
-            </Link>
-            <Link to={`/Collection`}
+            </NavLink>
+            <NavLink to="/"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 收藏
-            </Link>   
+            </NavLink>
+               
         </>
     )
 
@@ -28,8 +28,8 @@ export default function NavBar({ open, onClose }) {
                 <NavBarContent />
             </div>
             <Drawer 
-                title="Function" 
-                placement="right" 
+                title="CATEGORY" 
+                placement="left" 
                 onClose={onClose} 
                 open={open} 
             >

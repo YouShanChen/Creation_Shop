@@ -1,17 +1,20 @@
 .container {
   width: 100%;
+  margin: 1rem;
+  display: flex;
+  align-self: center;
   margin: auto;
 }
 
 @media (min-width: 576px) {
   .container {
-    width: 540px;
+    width: 100%;
   }
 }
 
 @media (min-width: 1600px) {
   .container {
-    width: 1500px;
+    width: 100%;
   }
 }
 
@@ -35,6 +38,7 @@ body {
   gap: 1em;
   margin-bottom: 0;
   padding-bottom: 0;
+  
 }
 
 .layoutHeader {
@@ -42,6 +46,12 @@ body {
   padding: 0;
   height: auto;
   line-height: 1.6;
+  background-color: blue;
+}
+
+.layoutContent {
+  grid-area: content;
+  background-color: brown;
 }
 
 .layoutFooter {
@@ -49,8 +59,6 @@ body {
   padding: 0;
   height: auto;
   line-height: 1.6;
+  background-color: aqua;
 }
 
-.layoutContent {
-  grid-area: content;
-}

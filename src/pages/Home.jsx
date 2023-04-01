@@ -1,30 +1,21 @@
 
-import { theme } from 'antd';
+
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import TagList from "../components/TagList" 
-import CreatorList from "../components/CreatorList" 
+
 
 function Home() {
-    const {
-      token: { colorBgBase, colorTextBase },
-    } = theme.useToken();
-    const title = "Creation Shop";
-  
-    return (
-      <div className="mainLayout">
 
-        <Header
-          className="layoutHeader"
-          title={title}
-        />
-        <div className="layoutContent container">
-        <TagList />
-        <CreatorList />
-      </div>
-        <Footer className="layoutFooter" />
-      </div>
-    );
-  }
+  return (
+    <div className="container mainLayout">
+      <Header
+        className="layoutHeader"
+        title="Creation Shop"
+      />
+      <div className="layout content"></div>
+      <Footer className="layoutFooter" />
+    </div>
+  );
+}
 
-  export default Home;
+export default Home;
