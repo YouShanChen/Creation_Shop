@@ -8,7 +8,7 @@ export default function TagList() {
             <p className={styles.tagTitle}>
                 作品標籤
             </p>
-            <Row gutter={[24,5 ]}>
+            <Row gutter={[24, 5]}>
                 <Col xs={8} xl={4} >
                     <p className={styles.tagItem}>
                         標籤一

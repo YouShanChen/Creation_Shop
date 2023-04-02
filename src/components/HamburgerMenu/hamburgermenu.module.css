@@ -1,16 +1,14 @@
 .hamMenu {
     display: inline-block;
-    
+    position: relative;
     z-index: 9;
     width: 2.5rem;
     height: 2.5rem;
-    border-radius: 2rem;
     opacity: 0.7;
-    left: 1rem;
-    top: 0rem;
     transition: all 0.25s linear;
+    bottom:16px;
   }
-  
+
   @media (min-width: 576px) {
     .showMobile {
       display: none;
@@ -63,9 +61,7 @@
     display: inline-block;
     position: relative;
     background-color: #2efff5;
-
     height: 3px;
-
     transition: all 0.25s linear;
     transform: rotate(-4deg);
     width: 30px;
@@ -77,10 +73,8 @@
     display: inline-block;
     position: relative;
     background-color: #2efff5;
-
     height: 3px;
     transition: all 0.25s linear;
-
     width: 30px;
     opacity: 1;
     transform: rotate(45deg);
@@ -90,12 +84,8 @@
     display: inline-block;
     position: relative;
     background-color: #2efff5;
-
     height: 3px;
-
     transition: all 0.25s linear;
-
-
     width: 30px;
     bottom: 25px;
     opacity: 1;

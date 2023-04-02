@@ -8,20 +8,23 @@ export default function Header({ title }) {
 
     const [isOnTouch, setIsOnTouch] = useState(false);
     return (
-        <div className="container">
+        
             <div className={styles.header}>
                 <h1 className={styles.headerTitle}>
                     {title}
                 </h1>
+                <div className={styles.headerFunction}>
+                    <NavBar open={isOnTouch} onClose={() => setIsOnTouch(false)} />
+                    <HamburgerMenu
+                        onClick={() => setIsOnTouch(!isOnTouch)}
+                        isOnTouch={isOnTouch}
+                    />
+                </div>
 
-                <HamburgerMenu
-                    onClick={() => setIsOnTouch(!isOnTouch)}
-                    isOnTouch={isOnTouch}
-                />
-                
+
             </div>
 
-        </div>
+        
 
     );
 }

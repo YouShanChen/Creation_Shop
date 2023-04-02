@@ -10,11 +10,11 @@ export default function NavBar({ open, onClose }) {
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 首頁
             </NavLink>
-            <NavLink to="/"
+            <NavLink to="/Category"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 訂單
             </NavLink>
-            <NavLink to="/"
+            <NavLink to="/Collection"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 收藏
             </NavLink>
@@ -29,7 +29,7 @@ export default function NavBar({ open, onClose }) {
             </div>
             <Drawer 
                 title="Creation Shop" 
-                placement="left" 
+                placement="right" 
                 onClose={onClose} 
                 open={open} 
             >
