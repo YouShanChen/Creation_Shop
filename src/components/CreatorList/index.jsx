@@ -9,8 +9,8 @@ export default function CreatorList() {
             <p className={styles.creatorTitle}>
                 熱門創作者
             </p>
-            <Row gutter={[{sm:6,md:24}, 5]}>
-                <Col span={8} >
+            <Row  justify="space-around" gutter={[{xs:12,sm:12,md:24,lg:128}, 5]}>
+                <Col   span={8} >
                     
                     <div className={styles.creatorItem}>
                         

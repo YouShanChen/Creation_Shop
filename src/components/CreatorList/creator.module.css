@@ -14,26 +14,32 @@
 }
 
 .creatorItem {
-    padding: 1rem;
+    padding-top: 1rem;
     text-align: center;
     background-color: rgb(219, 219, 219);
     font-size: 1.2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+align-items: center;
     border-radius: 1rem;
+
 
 }
 
 .creatorImage {
     max-width: 100%;
     border-radius: 10rem;
+    margin:0 1rem;
 }
 
 .creatorText {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: black;
+    width: 100%;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
 .creatorName {
@@ -42,7 +48,7 @@
 }
 
 .creatorDetail {
-    font-size: 1rem;
+    font-size: 0.6rem;
 }
 
 @media (min-width: 576px) {
@@ -52,5 +58,13 @@
     }
     .creatorName {
         font-size: 3rem;
+    }
+    .creatorDetail {
+        font-size: 1rem;
+    }
+  }
+  @media (min-width: 1440px) {
+    .box{
+        padding:1rem 5rem;
     }
   }
