@@ -3,6 +3,7 @@ import styles from "./header.module.css";
 import NavBar from "../NavBar";
 import HamburgerMenu from "../HamburgerMenu";
 
+
 export default function Header({ title }) {
 
     const [isOnTouch, setIsOnTouch] = useState(false);
@@ -12,14 +13,14 @@ export default function Header({ title }) {
                 <h1 className={styles.headerTitle}>
                     {title}
                 </h1>
-                
-                <HamburgerMenu
-                        onClick={() => setIsOnTouch(!isOnTouch)}
-                        isOnTouch={isOnTouch}
-                    />
 
+                <HamburgerMenu
+                    onClick={() => setIsOnTouch(!isOnTouch)}
+                    isOnTouch={isOnTouch}
+                />
+                
             </div>
-            
+
         </div>
 
     );
