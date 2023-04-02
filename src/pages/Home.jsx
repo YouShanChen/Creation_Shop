@@ -3,7 +3,7 @@
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import TagList from "../components/TagList"
-
+import CreatorList from "../components/CreatorList"
 function Home() {
 
   return (
@@ -14,6 +14,7 @@ function Home() {
       />
       <div className="layoutContent">
         <TagList />
+        <CreatorList />
       </div>
       <Footer className="layoutFooter" />
     </div>
