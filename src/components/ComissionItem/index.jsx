@@ -12,15 +12,15 @@ export default function ComissionItem({ comission }) {
                     alt={comission.name} />
             </Link>
             <div className={styles.info}>
-                <h6 className={styles.category}>
+                <h2 className={styles.category}>
                     {comission.category}
-                </h6>
-                <h6 className={styles.price}>
-                    {comission.price}
-                </h6>
-                <h2 className={styles.name}>
-                    {comission.name}
                 </h2>
+                <h2 className={styles.price}>
+                    {comission.price}
+                </h2>
+                <h6 className={styles.name}>
+                    {comission.name}
+                </h6>
             </div>
 
         </div>

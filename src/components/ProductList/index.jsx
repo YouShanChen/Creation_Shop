@@ -7,10 +7,8 @@ export default function ProductList({comissions}) {
     {comissions.map(comission => (
         <Col 
           key={comission.id} 
-          sm={{ span: 12 }} 
-          lg={{ span: 8 }}
-          xl={{ span: 6 }}
-          xxl={{ span: 4 }}
+          sm={{ span: 24 }} 
+          md={{ span: 12 }}
         >
           <ComissionItem comission={comission}/>
         </Col>
