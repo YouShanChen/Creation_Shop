@@ -1,7 +1,15 @@
+import { useParams } from 'react-router-dom';
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-function Category() {
+import ComissionList from "../components/ComissionList";
+import comissions from "../json/comissions.json";
 
+function Category() {
+  const { categoryName } = useParams();
+  const _comissions = comissions.filter(
+    x => x?.['1tag'].toUpperCase() === categoryName.toUpperCase()
+  );
+  const title = "Category";
     return (
   
       <div className="container mainLayout">
@@ -11,7 +19,7 @@ function Category() {
           title={title}
         />
         <div className="layoutContent">
-
+        <ComissionList comissions={_comissions} />
         </div>
         <Footer className="layoutFooter" />
       </div>

@@ -10,14 +10,19 @@
     background-color: rgba(0, 255, 255, 0.76);
     font-size: 2rem;
     align-self: center;
-    padding:0 1rem;
+    padding: 0 1rem;
 }
 
 .tagItem {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     text-align: center;
     background-color: aqua;
     border-radius: 3rem;
     font-size: 1.2rem;
 }
 
+@media (min-width: 576px) {
+    .tagItem {
+        padding: 1rem 0;
+    }
+}

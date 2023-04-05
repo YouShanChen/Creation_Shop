@@ -10,7 +10,7 @@ export default function NavBar({ open, onClose }) {
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 首頁
             </NavLink>
-            <NavLink to="/Category"
+            <NavLink to="/Order"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 訂單
             </NavLink>

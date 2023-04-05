@@ -5,10 +5,10 @@ export default function ComissionItem({ comission }) {
 
     return (
         <div className={styles.box}>
-            <Link to={`/products/id/${comission.id}`}>
+            <Link to={`/comissions/id/${comission.id}`}>
                 <img
                     style={{ width: '100%' }}
-                    src={comission.image}
+                    src={comission.image1}
                     alt={comission.name} />
             </Link>
             <div className={styles.info}>
