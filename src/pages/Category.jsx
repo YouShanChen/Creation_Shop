@@ -7,7 +7,7 @@ import comissions from "../json/comissions.json";
 function Category() {
   const { categoryName } = useParams();
   const _comissions = comissions.filter(
-    x => x?.['1tag'].toUpperCase() === categoryName.toUpperCase()
+    x => (x?.tag1.toUpperCase() === categoryName.toUpperCase()) ||(x?.tag2.toUpperCase() === categoryName.toUpperCase())||(x?.tag3.toUpperCase() === categoryName.toUpperCase())||(x?.tag4.toUpperCase() === categoryName.toUpperCase())
   );
   const title = "Category";
     return (

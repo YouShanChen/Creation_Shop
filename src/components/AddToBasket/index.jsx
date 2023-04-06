@@ -1,6 +1,5 @@
 import { Button, notification } from "antd"
 import { useDispatch } from "react-redux";
-import { useDispatch } from "react-redux";
 import { addCartItems } from "../../redux/cartSlice";
 import styles from "./addtobasket.module.css"
 

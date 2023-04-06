@@ -2,14 +2,23 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-radius: 2rem;
+    border-radius: 1rem;
+    background-color: black;
+    margin: 1rem;
 }
 
 .info {
     display: flex;
     flex-direction: column;
-    align-items: start;
     position: relative;
+    padding-top: 3rem;
+    padding-right: 1rem;
+}
+
+.imgBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .category {
@@ -23,13 +32,68 @@
 .name {
     position: absolute;
     right: 1rem;
-    bottom: 1rem;
+    bottom: 0.5rem;
     z-index: 9;
+}
+
+.img1 {
+    display: block;
+    height: 15rem;
+    object-fit: cover;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.img2 {
+
+    height: 15rem;
+    object-fit: contain;
+    display: none;
+}
+
+.img3 {
+
+    height: 15rem;
+    object-fit: contain;
+    display: none;
 }
 
 @media (min-width: 768px) {
     .box {
         flex-direction: column;
-        justify-content: center;
+    }
+
+    .img1 {
+        border-radius: 0%;
+    }
+
+    .info {
+
+        align-items: center;
+
+    }
+
+
+
+    .imgBox {
+        display: flex;
+        flex-direction: row;
+        padding-top: 3rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .img1 {
+        height: 12rem;
+    }
+
+    .img2 {
+        display: block;
+        height: 12rem;
+    }
+
+    .img3 {
+        display: block;
+        height: 12rem;
     }
 }

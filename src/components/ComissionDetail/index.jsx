@@ -1,5 +1,5 @@
 import AddToBasket from "../AddToBasket"
-import styles from "./productdetail.module.css"
+import styles from "./comissiondetail.module.css"
 function ComissionDetail({ comission }) {
     return (
         <div className={styles.box}>
