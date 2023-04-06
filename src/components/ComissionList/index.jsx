@@ -3,6 +3,7 @@ import ComissionItem from "../ComissionItem";
 
 export default function ComissionList({comissions}) {
   return (
+    
     <Row gutter={[32, 32]}>
     {comissions.map(comission => (
         <Col 

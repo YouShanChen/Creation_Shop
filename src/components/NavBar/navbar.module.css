@@ -14,13 +14,13 @@
 }
 
 .navItem {
-  font-size: 2rem;
+  font-size: 1rem;
   cursor: pointer;
   color: rgb(0, 0, 0);
   opacity: 0.6;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
-  margin:0 2rem;
+  margin:0 1rem;
 }
 
 .navItem:hover {
@@ -44,13 +44,13 @@
   }
 
   .navItem {
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     color: rgb(0, 0, 0);
     opacity: 0.6;
     text-decoration: none;
     transition: all 0.5s ease-in-out;
-    margin:0 1.4rem;
+    margin:0 1rem;
   }
 
   .navItem:hover {

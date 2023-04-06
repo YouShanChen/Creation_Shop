@@ -3,7 +3,7 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import ComissionList from "../components/ComissionList";
 import comissions from "../json/comissions.json";
-
+import ComissionListTitle from "../components/ComissionListTitle";
 function Category() {
   const { categoryName } = useParams();
   const _comissions = comissions.filter(
@@ -19,6 +19,7 @@ function Category() {
           title={title}
         />
         <div className="layoutContent">
+          <ComissionListTitle/>
         <ComissionList comissions={_comissions} />
         </div>
         <Footer className="layoutFooter" />

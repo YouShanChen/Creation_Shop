@@ -19,15 +19,22 @@ export default function AddToCart({ comission }) {
       openNotification();
       dispatch(addCartItems({
         id: comission.id,
+        category:comission.category,
         name: comission.name,
-        image:comission.image,
+        image1:comission.image1,
+        image2:comission.image2,
+        image3:comission.image3,
         price: comission.price,
+        des1:comission.des1,
+        des2:comission.des2,
+        des3:comission.des3,
+        des4:comission.des4,
       }))
     };
   
     return (
       <Button type="primary" className={styles.btn} onClick={addToCart}>
-        <Basket color={"#ffffff"}/>發起委託
+        發起委託
       </Button>
     );
   }
