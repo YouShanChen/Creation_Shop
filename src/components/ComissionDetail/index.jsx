@@ -4,7 +4,7 @@ function ComissionDetail({ comission }) {
     return (
         <div className={styles.box}>
             <div className={styles.image}>
-
+                {comission.image1}
             </div>
             <div className={styles.detail}>
                 <div className={styles.info}>

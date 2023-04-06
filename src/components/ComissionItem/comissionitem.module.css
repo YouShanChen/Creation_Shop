@@ -32,13 +32,15 @@
 .name {
     position: absolute;
     right: 1rem;
-    bottom: 0.5rem;
+    bottom: 0.3rem;
     z-index: 9;
+    font-size: 1rem;
 }
 
 .img1 {
     display: block;
     height: 15rem;
+
     object-fit: cover;
     border-bottom-left-radius: 1rem;
     border-top-left-radius: 1rem;
