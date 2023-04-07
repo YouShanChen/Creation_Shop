@@ -39,7 +39,7 @@ export default function Footer() {
 
 
                 <p className={styles.copyRight}>
-                    Copyright
+                    ©2023 Creation Shop
                 </p>
             </footer>
         </div>

@@ -22,7 +22,7 @@
 body {
   font-size: 16px;
   line-height: 1.6;
-  background-color: #111828;
+
   color: white;
 }
 
@@ -46,12 +46,11 @@ body {
   padding: 0;
   height: auto;
   line-height: 1.6;
-  background-color: blue;
+
 }
 
 .layoutContent {
   grid-area: content;
-  background-color: brown;
 }
 
 .layoutFooter {
@@ -59,6 +58,6 @@ body {
   padding: 0;
   height: auto;
   line-height: 1.6;
-  background-color: aqua;
+
 }
 

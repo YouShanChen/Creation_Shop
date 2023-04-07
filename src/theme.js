@@ -4,8 +4,8 @@ const darkTheme = {
     algorithm: theme.darkAlgorithm,
     token: {
       colorPrimary: "#1677ff",
-      colorBgBase	: "#111828",
-      colorTextBase: "#000000",
+      colorBgBase	: "#408492",
+      colorTextBase: "#ffffff",
       colorTextFooter: "#ffffff",
       colorBgFooter: "#000000",
     },
