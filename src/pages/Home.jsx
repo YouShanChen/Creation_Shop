@@ -6,7 +6,7 @@ import TagList from "../components/TagList"
 import CreatorList from "../components/CreatorList"
 function Home() {
   const {
-    token: { colorBgBase, colorTextBase },
+    token: { colorPrimary,colorBgBase, colorTextBase },
   } = theme.useToken();
   const title = "Creation Shop";
   return (
@@ -16,7 +16,7 @@ function Home() {
         <title>{title}</title>
         <style>{`
             body { 
-              background-color: ${colorBgBase}; 
+              background-color: ${colorPrimary}; 
               color: ${colorTextBase}
             }
         `}</style>
@@ -25,14 +25,12 @@ function Home() {
         className="layoutHeader"
         title={title}
       />
-      <div className="layoutContent">
-        <Helmet>
-          <style>
-            {`            layoutContent{
-              background-color: ${colorTextBase};
-            }`}
-          </style>
-        </Helmet>
+      <div className="layoutContent" >
+      <style>{`
+            .layoutContent { 
+              background-color: ${colorBgBase}; 
+            }
+        `}</style>
         <TagList />
         <CreatorList />
       </div>

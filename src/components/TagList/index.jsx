@@ -1,12 +1,15 @@
 import Link from '../Link';
 import styles from "./taglist.module.css"
-import { Row, Col } from "antd";
+import { Row, Col ,theme} from "antd";
 export default function TagList() {
-
+    const {
+        token: { colorPrimary },
+    } = theme.useToken();
     return (
 
-        <div className={styles.box}>
+        <div className={styles.box} style={{backgroundColor:colorPrimary}}>
 
+            
             <p className={styles.tagTitle}>
                 作品標籤
             </p>

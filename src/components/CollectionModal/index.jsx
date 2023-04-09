@@ -1,24 +1,24 @@
 import { Row, Col, Button, theme } from "antd";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { removeCartItems } from "../../redux/cartSlice";
+import { removeCollectionItems } from "../../redux/collectionSlice";
 
-import styles from "./basketmodal.module.css"
+import styles from "./collectionmodal.module.css"
 
-import { selectCartItems } from "../../redux/cartSlice";
-export default function BasketModal() {
+import { selectCollectionItems } from "../../redux/collectionSlice";
+export default function CollectionModal() {
    const { token: { colorTextBase,colorPrimary } } = theme.useToken();
 
    const dispatch = useDispatch();
-   const cartItems = useSelector(selectCartItems);
+   const collectionItems = useSelector(selectCollectionItems);
    return (
       <div className={styles.box}>
 
-         {cartItems.length === 0 ? (
-            <div className={styles.notification} >Cart is empty</div>
+         {collectionItems.length === 0 ? (
+            <div className={styles.notification} >Collection is empty</div>
          ) : (
             <Row gutter={[32, 32]}>
-               {cartItems.map(item => (
+               {collectionItems.map(item => (
                   <Col
                      key={item.id}
                      sm={{ span: 24 }} 
@@ -26,7 +26,7 @@ export default function BasketModal() {
                   >
                      <div className={styles.itemBox}>
 
-                        <Link to={`/orders/id/${item.id}`}>
+                        <Link to={`/comissions/id/${item.id}`}>
                            <div className={styles.imgBox}>
                               <img
                                  className={styles.img1}
@@ -56,7 +56,7 @@ export default function BasketModal() {
                               {item.name}
                            </h6>
                         </div>
-                        <div className={styles.delete} onClick={() => dispatch(removeCartItems(item.id))}>
+                        <div className={styles.delete} onClick={() => dispatch(removeCollectionItems(item.id))}>
                         x
                      </div>
                      </div>

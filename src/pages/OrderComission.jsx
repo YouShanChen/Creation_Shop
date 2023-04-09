@@ -3,10 +3,11 @@ import { Helmet } from "react-helmet-async"
 import { useParams } from 'react-router-dom';
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import ComissionDetail from "../components/ComissionDetail";
+import OrderComissionDetail from "../components/OrderComissionDetail";
+import ComissionState from "../components/ComissionState"
 import comissions from "../json/comissions.json";
 
-function Comission(){
+function OrderComission(){
    const {
       token: { colorPrimary, colorTextBase },
     } = theme.useToken();
@@ -30,13 +31,14 @@ function Comission(){
               className="layoutHeader"
               title="Product Detail"
            />
-           <div className="layoutContent container">
+           <div className="layoutContent container" >
             
-              <ComissionDetail comission={comission} />
+              <OrderComissionDetail comission={comission} />
+              <ComissionState />
            </div>
            <Footer className="layoutFooter" />
         </div>
      );
 }
 
-export default Comission;
+export default OrderComission;

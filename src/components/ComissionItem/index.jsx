@@ -1,6 +1,5 @@
 import Link from '../Link';
 import styles from "./comissionitem.module.css"
-
 export default function ComissionItem({ comission }) {
 
     return (
@@ -21,7 +20,6 @@ export default function ComissionItem({ comission }) {
                     src={comission.image3}
                     alt={comission.name} />
                 </div>
-                
             </Link>
            
             

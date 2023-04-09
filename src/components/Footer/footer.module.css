@@ -11,13 +11,16 @@
 
 .footerLink {
    text-decoration: none;
+   color: white;
+   font-size: 1rem;
 }
 
 .footerIcon {
    background-color: aliceblue;
    width: 3rem;
-
-   border-radius: 0.25rem;
+border: 1rem;
+border-color: black;
+   border-radius: 3rem;
 }
 
 

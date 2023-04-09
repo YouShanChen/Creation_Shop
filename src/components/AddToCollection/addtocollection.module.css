@@ -1,0 +1,17 @@
+
+.btn{
+    position:absolute ;
+    top:1rem;
+    right:30%;
+color: aliceblue;
+}
+@media (min-width: 576px){
+    .btn{
+        right:25%;
+    }
+}
+@media (min-width: 768px){
+    .btn{
+        right:15%;
+    }
+}

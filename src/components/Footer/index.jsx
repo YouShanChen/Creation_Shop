@@ -1,6 +1,6 @@
 import styles from './footer.module.css';
 import { Row, Col } from "antd";
-
+import { TwitterOutlined, FacebookOutlined, InstagramOutlined } from '@ant-design/icons';
 export default function Footer() {
 
     return (
@@ -23,16 +23,17 @@ export default function Footer() {
 
                     </Col>
                     <Col span={3}>
-                        <a href="https://www.facebook.com/no.ki.75491856/"><img src="/images/facebook.png" alt="fb"
-                            className={styles.footerIcon} /></a>
+                        <a href="https://www.facebook.com/no.ki.75491856/">
+                            <FacebookOutlined style={{ color: 'white', fontSize: '3rem' }} /></a>
 
                     </Col>
                     <Col span={3}>
-                        <a href="https://www.instagram.com/nokinok_art/"><img src="/images/instagram.png" alt="inst"
-                            className={styles.footerIcon} /></a>
+                        <a href="https://www.instagram.com/nokinok_art/">
+                            <InstagramOutlined style={{ color: 'white', fontSize: '3rem' }} /></a>
                     </Col>
                     <Col span={3}>
-                        <a href="https://twitter.com/noki_nok_"><img src="/images/twitter.png" alt="twitter" className={styles.footerIcon} /></a>
+                        <a href="https://twitter.com/noki_nok_">
+                            <TwitterOutlined style={{ color: 'white', fontSize: '3rem' }} /></a>
                     </Col>
                 </Row>
 

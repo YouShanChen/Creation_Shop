@@ -6,21 +6,24 @@
 .imageBox {
    padding: 0 8rem;
    align-self: center;
+   position: relative;
 }
 
 .imageSubBox {
    display: flex;
    flex-direction: row;
    justify-content: space-around;
-   padding:1rem 0;
+   padding: 1rem 0;
 }
 
 .image1 {
    max-width: 100%;
    height: auto;
-   object-fit: cover;
+   object-fit: contain;
    object-position: center;
    border-radius: 2%;
+   align-self: center;
+
 }
 
 .image2 {
@@ -37,7 +40,7 @@
    display: flex;
    flex-direction: column;
    align-self: center;
-   align-items: center;
+   width: 100%;
 }
 
 .info {
@@ -46,12 +49,13 @@
 }
 
 .category {
-   opacity: 0.4;
+   font-weight: bold;
    margin-bottom: 0.2rem;
 }
 
 .price {
-   font-size: 1.5rem;
+color: rgb(114, 242, 68);
+
 }
 
 .name {
@@ -63,21 +67,37 @@
 }
 
 .text {
-   opacity: 0.6;
    font-size: 1rem;
-   margin-bottom: 1rem;
    text-indent: 2rem;
-   text-align: justify;
-}
-.desTitle{
-   align-self: self-start;
-}
-.des {
-   font-size: 1rem;
+   margin-bottom: 1rem;
 }
 
+.desTitle {
+   align-self: self-start;
+   margin-bottom: 0rem;
+}
+
+.des {
+   padding-left: 2rem;
+
+}
+.btn{
+   align-self: center;
+}
 @media (min-width: 768px) {
    .box {
       flex-direction: row;
+   }
+   .imageBox{
+      width:75%;
+      padding:0 3rem;
+   }
+   .imageSubBox {
+
+      justify-content: space-between;
+      padding: 1rem 0;
+   }
+   .detail{
+      align-items: self-start;
    }
 }

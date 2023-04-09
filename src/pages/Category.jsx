@@ -8,36 +8,41 @@ import comissions from "../json/comissions.json";
 import ComissionListTitle from "../components/ComissionListTitle";
 function Category() {
   const {
-    token: { colorBgBase, colorTextBase },
+    token: { colorPrimary, colorBgBase, colorTextBase },
   } = theme.useToken();
   const { categoryName } = useParams();
   const _comissions = comissions.filter(
-    x => (x?.tag1.toUpperCase() === categoryName.toUpperCase()) ||(x?.tag2.toUpperCase() === categoryName.toUpperCase())||(x?.tag3.toUpperCase() === categoryName.toUpperCase())||(x?.tag4.toUpperCase() === categoryName.toUpperCase())
+    x => (x?.tag1.toUpperCase() === categoryName.toUpperCase()) || (x?.tag2.toUpperCase() === categoryName.toUpperCase()) || (x?.tag3.toUpperCase() === categoryName.toUpperCase()) || (x?.tag4.toUpperCase() === categoryName.toUpperCase())
   );
   const title = "Category";
-    return (
-  
-      <div className="container mainLayout">
-        <Helmet>
+  return (
+
+    <div className="container mainLayout">
+      <Helmet>
         <title>{title}</title>
         <style>{`
             body { 
-              background-color: ${colorBgBase}; 
+              background-color: ${colorPrimary}; 
               color: ${colorTextBase}
             }
         `}</style>
       </Helmet>
-        <Header
-          className="layoutHeader"
-          title={title}
-        />
-        <div className="layoutContent">
-          <ComissionListTitle/>
+      <Header
+        className="layoutHeader"
+        title={title}
+      />
+      <div className="layoutContent">
+        <style>{`
+            .layoutContent { 
+              background-color: ${colorBgBase}; 
+            }
+        `}</style>
+        <ComissionListTitle />
         <ComissionList comissions={_comissions} />
-        </div>
-        <Footer className="layoutFooter" />
       </div>
-    );
-  }
-  
-  export default Category;
+      <Footer className="layoutFooter" />
+    </div>
+  );
+}
+
+export default Category;

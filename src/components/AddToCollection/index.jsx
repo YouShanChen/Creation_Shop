@@ -1,23 +1,23 @@
 import { Button, notification } from "antd"
 import { useDispatch } from "react-redux";
-import { addCartItems } from "../../redux/cartSlice";
-import styles from "./addtobasket.module.css"
-
-export default function AddToCart({ comission }) {
+import { addCollectionItems } from "../../redux/collectionSlice";
+import styles from "./addtocollection.module.css"
+import { StarOutlined } from '@ant-design/icons';
+export default function AddToCollection({ comission }) {
     const dispatch = useDispatch();
   
     const openNotification = () => {
       notification.open({
         message: "通知",
         description:
-          `成功發出委託`,
+          `成功加入收藏`,
         placement: 'bottomRight'
       });
     };
   
-    const addToCart = () => {
+    const addToCollection = () => {
       openNotification();
-      dispatch(addCartItems({
+      dispatch(addCollectionItems({
         id: comission.id,
         category:comission.category,
         name: comission.name,
@@ -33,8 +33,8 @@ export default function AddToCart({ comission }) {
     };
   
     return (
-      <Button type="primary" className={styles.btn} onClick={addToCart}>
-        發起委託
+      <Button type="primary" shape="circle" icon={<StarOutlined />} className={styles.btn} onClick={addToCollection}>
+         
       </Button>
     );
   }

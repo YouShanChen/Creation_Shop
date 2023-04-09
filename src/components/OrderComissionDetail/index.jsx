@@ -1,7 +1,5 @@
-import AddToBasket from "../AddToBasket"
-import AddToCollection from "../AddToCollection"
-import styles from "./comissiondetail.module.css"
-function ComissionDetail({ comission }) {
+import styles from "./ordercomissiondetail.module.css"
+function OrderComissionDetail({ comission }) {
     return (
         <div className={styles.box}>
             <div className={styles.imageBox}>
@@ -19,7 +17,7 @@ function ComissionDetail({ comission }) {
                     src={comission.image3}
                     alt={comission.name} />
                 </div>
-                <AddToCollection comission={comission}/>
+                
             </div>
 
             <div className={styles.detail}>
@@ -44,12 +42,9 @@ function ComissionDetail({ comission }) {
                     <p className={styles.desTitle}>•付款分段：</p>
                     <p className={styles.des}>{comission.des4}</p>
                 </div>
-                <div className={styles.btn}>
-                    <AddToBasket comission={comission} />
-                </div>
             </div>
         </div>
     );
 
 }
-export default ComissionDetail;
+export default OrderComissionDetail;

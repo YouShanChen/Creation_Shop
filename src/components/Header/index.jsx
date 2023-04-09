@@ -3,7 +3,6 @@ import styles from "./header.module.css";
 import NavBar from "../NavBar";
 import HamburgerMenu from "../HamburgerMenu";
 
-
 export default function Header({ title }) {
 
     const [isOnTouch, setIsOnTouch] = useState(false);
