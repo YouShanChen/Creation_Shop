@@ -5,6 +5,7 @@ import thunk from 'redux-thunk';
 import cartReducer from './cartSlice';
 import colorReducer from './colorSlice';
 import collectionReducer from './collectionSlice';
+import stateReducer from './stateSlice';
 // Data Persist Config
 const persistConfig = {
   key: 'shoppingCart',
@@ -14,13 +15,14 @@ const persistConfig = {
 const persistedCartReducer = persistReducer(persistConfig, cartReducer);
 const persistedColorReducer = persistReducer(persistConfig, colorReducer);
 const persistedCollectionReducer = persistReducer(persistConfig, collectionReducer);
-
+const persistedStateReducer = persistReducer(persistConfig, stateReducer);
 // Part2: Combine Reducers and Create a Store
 export const store = configureStore({
    reducer: {
      cart: persistedCartReducer,
      color: persistedColorReducer,
-     collection:persistedCollectionReducer
+     collection:persistedCollectionReducer,
+     state:persistedStateReducer
    },
    devTools: process.env.NODE_ENV !== 'production',
    middleware: [thunk]

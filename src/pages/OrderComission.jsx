@@ -29,12 +29,12 @@ function OrderComission(){
       </Helmet>
            <Header
               className="layoutHeader"
-              title="Product Detail"
+              title="Comission Detail"
            />
            <div className="layoutContent container" >
             
               <OrderComissionDetail comission={comission} />
-              <ComissionState />
+              <ComissionState comission={comission}/>
            </div>
            <Footer className="layoutFooter" />
         </div>
