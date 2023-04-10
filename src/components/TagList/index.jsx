@@ -7,11 +7,11 @@ export default function TagList() {
     } = theme.useToken();
     return (
 
-        <div className={styles.box} style={{backgroundColor:colorItem}}>
+        <div className={styles.box} >
 
             
-            <p className={styles.tagTitle} style={{backgroundColor:colorPrimary}}>
-                作品標籤
+            <p className={styles.tagTitle} >
+                熱門標籤
             </p>
             <Row gutter={[24, 5]}>
                 <Col xs={8} xl={4} >

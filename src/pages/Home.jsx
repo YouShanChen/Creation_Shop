@@ -13,7 +13,7 @@ function Home() {
 
     <div className="container mainLayout">
       <Helmet>
-        <title>{title}</title>
+        <title >{title}</title>
         <style>{`
             body { 
               background-color: ${colorPrimary}; 

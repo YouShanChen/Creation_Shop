@@ -1,6 +1,8 @@
 .box {
    display: flex;
    flex-direction: column;
+   color: #39737f;
+   background-color: #ffffff;
 }
 
 .imageBox {
@@ -52,7 +54,7 @@
 }
 
 .price {
-   color: rgb(114, 242, 68);
+   font-weight: bold;
 
 }
 

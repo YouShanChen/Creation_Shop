@@ -8,7 +8,7 @@ export default function CreatorList() {
     return (
 
         <div className={styles.box}>
-            <p className={styles.creatorTitle} style={{backgroundColor:colorPrimary}}>
+            <p className={styles.creatorTitle} >
                 熱門創作者
             </p>
             <Row justify="space-around" gutter={[{ xs: 12, sm: 12, md: 24, lg: 128 }, 5]}>

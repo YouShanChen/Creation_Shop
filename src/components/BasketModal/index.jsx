@@ -12,7 +12,7 @@ export default function BasketModal() {
    const dispatch = useDispatch();
    const cartItems = useSelector(selectCartItems);
    return (
-      <div className={styles.box} style={{backgroundColor:colorBgBase}}>
+      <div className={styles.box} >
 
          {cartItems.length === 0 ? (
             <div className={styles.notification} >Cart is empty</div>
@@ -25,7 +25,7 @@ export default function BasketModal() {
                      sm={{ span: 24 }}
                      md={{ span: 12 }}
                   >
-                     <div className={styles.itemBox} style={{backgroundColor:colorPrimary}}>
+                     <div className={styles.itemBox}>
 
                         <Link to={`/orders/id/${item.id}`}>
                            <div className={styles.imgBox}>

@@ -6,7 +6,7 @@ export default function ComissionItem({ comission }) {
         token: { colorPrimary, colorBgBase,colorTextBase,colorItem,colorNavItem},
     } = theme.useToken();
     return (
-        <div className={styles.box} style={{backgroundColor:colorPrimary}}>
+        <div className={styles.box}>
   
             <Link to={`/comissions/id/${comission.id}`}>
                 <div className={styles.imgBox}>

@@ -12,7 +12,7 @@ export default function CollectionModal() {
    const dispatch = useDispatch();
    const collectionItems = useSelector(selectCollectionItems);
    return (
-      <div className={styles.box} style={{backgroundColor:colorBgBase}}>
+      <div className={styles.box}>
 
          {collectionItems.length === 0 ? (
             <div className={styles.notification} >Collection is empty</div>
@@ -25,7 +25,7 @@ export default function CollectionModal() {
                      sm={{ span: 24 }} 
                      md={{ span: 12 }}
                   >
-                     <div className={styles.itemBox} style={{backgroundColor:colorPrimary}}>
+                     <div className={styles.itemBox}>
 
                         <Link to={`/comissions/id/${item.id}`}>
                            <div className={styles.imgBox}>
