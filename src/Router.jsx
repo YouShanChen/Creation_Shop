@@ -1,16 +1,18 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ConfigProvider } from 'antd';
+import { useSelector } from "react-redux";
 import { HelmetProvider } from 'react-helmet-async'
 import Home from './pages/Home';
 import Order from './pages/Order';
 import Collection from './pages/Collection';
 import Category from './pages/Category';
 import Comission from './pages/Comission';
-import { darkTheme } from './theme';
+import { darkTheme,lightTheme } from './theme';
 import OrderComission from './pages/OrderComission';
-
+import { selectLightMode } from "./redux/colorSLice";
 function Router() {
-    const theme=darkTheme;
+  const lightMode = useSelector(selectLightMode);
+  const theme = lightMode ? lightTheme : darkTheme;
     return(
 <ConfigProvider theme={theme} >
         <HelmetProvider context={{}}>

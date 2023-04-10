@@ -1,9 +1,12 @@
 import Link from '../Link';
 import styles from "./comissionitem.module.css"
+import { theme} from "antd";
 export default function ComissionItem({ comission }) {
-
+    const {
+        token: { colorPrimary, colorBgBase,colorTextBase,colorItem,colorNavItem},
+    } = theme.useToken();
     return (
-        <div className={styles.box}>
+        <div className={styles.box} style={{backgroundColor:colorPrimary}}>
   
             <Link to={`/comissions/id/${comission.id}`}>
                 <div className={styles.imgBox}>
@@ -23,7 +26,7 @@ export default function ComissionItem({ comission }) {
             </Link>
            
             
-            <div className={styles.info}>
+            <div className={styles.info} style={{color:colorTextBase}}>
                 <h2 className={styles.category}>
                     {comission.category}
                 </h2>

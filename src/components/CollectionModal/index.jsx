@@ -1,4 +1,4 @@
-import { Row, Col, Button, theme } from "antd";
+import { Row, Col,  theme } from "antd";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { removeCollectionItems } from "../../redux/collectionSlice";
@@ -7,12 +7,12 @@ import styles from "./collectionmodal.module.css"
 
 import { selectCollectionItems } from "../../redux/collectionSlice";
 export default function CollectionModal() {
-   const { token: { colorTextBase,colorPrimary } } = theme.useToken();
+   const { token: { colorBgBase,colorPrimary } } = theme.useToken();
 
    const dispatch = useDispatch();
    const collectionItems = useSelector(selectCollectionItems);
    return (
-      <div className={styles.box}>
+      <div className={styles.box} style={{backgroundColor:colorBgBase}}>
 
          {collectionItems.length === 0 ? (
             <div className={styles.notification} >Collection is empty</div>
@@ -25,7 +25,7 @@ export default function CollectionModal() {
                      sm={{ span: 24 }} 
                      md={{ span: 12 }}
                   >
-                     <div className={styles.itemBox}>
+                     <div className={styles.itemBox} style={{backgroundColor:colorPrimary}}>
 
                         <Link to={`/comissions/id/${item.id}`}>
                            <div className={styles.imgBox}>

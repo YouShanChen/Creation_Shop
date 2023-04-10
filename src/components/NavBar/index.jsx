@@ -21,12 +21,6 @@ export default function NavBar({ open, onClose }) {
             <NavLink to="/"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 首頁
-            <style>{`
-            .navItem { 
-              color: ${colorNavItem}
-            }
-        `}
-            </style>
             </NavLink>
             <Badge count={cartcount} color="#6366F2" style={{color: 'white'}}>
             <NavLink to="/Order"
@@ -53,7 +47,7 @@ export default function NavBar({ open, onClose }) {
                 placement="right" 
                 onClose={onClose} 
                 open={open} 
-                style={{backgroundColor:"black"}}
+                style={{backgroundColor:colorNavItem}}
             >
                 <div className={styles.drawer}>
                     <NavBarContent />

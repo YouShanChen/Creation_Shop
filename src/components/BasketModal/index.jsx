@@ -1,4 +1,4 @@
-import { Row, Col, Button, theme } from "antd";
+import { Row, Col, theme } from "antd";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { removeCartItems } from "../../redux/cartSlice";
@@ -7,12 +7,12 @@ import styles from "./basketmodal.module.css"
 
 import { selectCartItems } from "../../redux/cartSlice";
 export default function BasketModal() {
-   const { token: { colorTextBase, colorPrimary } } = theme.useToken();
+   const { token: { colorBgBase,colorTextBase, colorPrimary } } = theme.useToken();
 
    const dispatch = useDispatch();
    const cartItems = useSelector(selectCartItems);
    return (
-      <div className={styles.box}>
+      <div className={styles.box} style={{backgroundColor:colorBgBase}}>
 
          {cartItems.length === 0 ? (
             <div className={styles.notification} >Cart is empty</div>
@@ -25,7 +25,7 @@ export default function BasketModal() {
                      sm={{ span: 24 }}
                      md={{ span: 12 }}
                   >
-                     <div className={styles.itemBox}>
+                     <div className={styles.itemBox} style={{backgroundColor:colorPrimary}}>
 
                         <Link to={`/orders/id/${item.id}`}>
                            <div className={styles.imgBox}>

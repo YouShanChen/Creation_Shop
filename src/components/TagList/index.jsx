@@ -3,14 +3,14 @@ import styles from "./taglist.module.css"
 import { Row, Col ,theme} from "antd";
 export default function TagList() {
     const {
-        token: { colorPrimary },
+        token: { colorPrimary, colorBgBase,colorTextBase,colorItem,colorNavItem},
     } = theme.useToken();
     return (
 
-        <div className={styles.box} style={{backgroundColor:colorPrimary}}>
+        <div className={styles.box} style={{backgroundColor:colorItem}}>
 
             
-            <p className={styles.tagTitle}>
+            <p className={styles.tagTitle} style={{backgroundColor:colorPrimary}}>
                 作品標籤
             </p>
             <Row gutter={[24, 5]}>

@@ -49,14 +49,14 @@
 .squreComplete {
 
     composes: squre;
-    background-color: rgb(76, 76, 76);
+    background-color: #daf9ff;
 
 
 }
 
 .barComplete {
     composes: bar;
-    background-color: rgb(76, 76, 76);
+    background-color: #daf9ff;
 }
 
 @media (min-width:768px) {
