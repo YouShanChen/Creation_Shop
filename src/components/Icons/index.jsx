@@ -2,9 +2,8 @@ import styles from "./icons.module.css"
 
 export function Sun({ color }) {
     return (
-      <div className={styles.box} style={{color:color}}>
-         <div  className={styles.squre} ></div>
-         <div className={styles.textBox}><div className={styles.text}>亮</div></div>
+      <div className={styles.lightbox} style={{color:color}}>
+         亮
       </div>
 
     );
@@ -12,7 +11,7 @@ export function Sun({ color }) {
  
  export function Moon({ color }) {
     return (
-      <div className={styles.box} style={{color:color}}>
+      <div className={styles.darkbox} style={{color:color}}>
       暗
    </div>
     );

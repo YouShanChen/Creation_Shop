@@ -24,16 +24,16 @@ export default function Footer() {
                     </Col>
                     <Col span={3}>
                         <a href="https://www.facebook.com/no.ki.75491856/">
-                            <FacebookOutlined style={{ color: 'white', fontSize: '3rem' }} /></a>
+                            <FacebookOutlined className={styles.footerIcon} /></a>
 
                     </Col>
                     <Col span={3}>
                         <a href="https://www.instagram.com/nokinok_art/">
-                            <InstagramOutlined style={{ color: 'white', fontSize: '3rem' }} /></a>
+                            <InstagramOutlined  className={styles.footerIcon} /></a>
                     </Col>
                     <Col span={3}>
                         <a href="https://twitter.com/noki_nok_">
-                            <TwitterOutlined style={{ color: 'white', fontSize: '3rem' }} /></a>
+                            <TwitterOutlined className={styles.footerIcon} /></a>
                     </Col>
                 </Row>
 

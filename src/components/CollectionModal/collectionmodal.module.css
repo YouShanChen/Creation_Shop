@@ -13,6 +13,10 @@
     margin: 1rem;
     position: relative;
 }
+.itemBox:hover
+{
+    transform: scale(1.1);
+}
 .notification{
 align-self: center;
  }
