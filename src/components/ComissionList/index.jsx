@@ -8,6 +8,7 @@ export default function ComissionList({comissions}) {
     {comissions.map(comission => (
         <Col 
           key={comission.id} 
+          xs={{ span: 24 }}
           sm={{ span: 24 }} 
           md={{ span: 12 }}
         >

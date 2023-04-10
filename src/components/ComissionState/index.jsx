@@ -45,7 +45,7 @@ var [state,addState] = useState(0);
                     <div className={styles.text}>交稿</div>
                 </div>
             </div>
-            <Button  onClick={()=>addState(state>7?state=0:state++)}>
+            <Button  style={{color:"black"}}onClick={()=>addState(state>7?state=0:state++)}>
                 完成進度
             </Button>
         </div>

@@ -21,6 +21,7 @@ export default function CollectionModal() {
                {collectionItems.map(item => (
                   <Col
                      key={item.id}
+                     xs={{ span: 24 }} 
                      sm={{ span: 24 }} 
                      md={{ span: 12 }}
                   >

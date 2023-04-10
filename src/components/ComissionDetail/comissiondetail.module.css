@@ -1,4 +1,8 @@
-.box {
+.box{
+   display: flex;
+   flex-direction: column;
+}
+.upBox {
    display: flex;
    flex-direction: column;
 }
@@ -54,7 +58,7 @@
 }
 
 .price {
-color: rgb(114, 242, 68);
+   color: rgb(114, 242, 68);
 
 }
 
@@ -81,23 +85,64 @@ color: rgb(114, 242, 68);
    padding-left: 2rem;
 
 }
-.btn{
+
+.btn {
    align-self: center;
 }
+.underBox{
+   display: flex;
+   flex-direction: column;
+   padding:3rem 1rem;
+
+}
+.noticeTitle{
+   background-color: rgba(0, 255, 255, 0.76);
+   font-size: 2rem;
+   align-self: center;
+   padding: 0 1rem;
+}
+.noticeSubTitle{
+   align-self: center;
+}
+.noticeItem{
+font-size:1.4rem;
+padding-top: 1rem;
+}
+.noticeText{
+font-size: 1rem;
+padding:1rem 2rem;
+}
+
+
 @media (min-width: 768px) {
-   .box {
+   .upBox {
       flex-direction: row;
    }
-   .imageBox{
-      width:75%;
-      padding:0 3rem;
+
+   .imageBox {
+      width: 75%;
+      padding: 0 3rem;
    }
+
+   .info {
+      width: 80%;
+      font-size: 1.8rem;
+   }
+.name{
+   font-size: 1.8rem;
+}
+   .desTitle {
+font-size: 1.5rem;
+   }
+
+   .des {
+      font-size: 1.5rem;
+   }
+
    .imageSubBox {
 
       justify-content: space-between;
       padding: 1rem 0;
    }
-   .detail{
-      align-items: self-start;
-   }
+
 }

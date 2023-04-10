@@ -7,7 +7,7 @@ import styles from "./basketmodal.module.css"
 
 import { selectCartItems } from "../../redux/cartSlice";
 export default function BasketModal() {
-   const { token: { colorTextBase,colorPrimary } } = theme.useToken();
+   const { token: { colorTextBase, colorPrimary } } = theme.useToken();
 
    const dispatch = useDispatch();
    const cartItems = useSelector(selectCartItems);
@@ -21,7 +21,8 @@ export default function BasketModal() {
                {cartItems.map(item => (
                   <Col
                      key={item.id}
-                     sm={{ span: 24 }} 
+                     xs={{ span: 24 }}
+                     sm={{ span: 24 }}
                      md={{ span: 12 }}
                   >
                      <div className={styles.itemBox}>
@@ -57,10 +58,10 @@ export default function BasketModal() {
                            </h6>
                         </div>
                         <div className={styles.delete} onClick={() => dispatch(removeCartItems(item.id))}>
-                        x
+                           x
+                        </div>
                      </div>
-                     </div>
-                     
+
                   </Col>
                ))}
             </Row>

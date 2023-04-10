@@ -33,8 +33,6 @@ export default function AddToCollection({ comission }) {
     };
   
     return (
-      <Button type="primary" shape="circle" icon={<StarOutlined />} className={styles.btn} onClick={addToCollection}>
-         
-      </Button>
+      <Button type="primary" shape="circle" icon={<StarOutlined />} className={styles.btn} onClick={addToCollection}/>
     );
   }

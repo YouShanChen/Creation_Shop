@@ -4,6 +4,13 @@
     align-items: center;
 }
 
+.title {
+    background-color: rgba(0, 255, 255, 0.76);
+    font-size: 2rem;
+    align-self: center;
+    padding: 0 1rem;
+}
+
 .col {
     display: flex;
     flex-direction: column;
@@ -23,6 +30,7 @@
 .list {
     display: flex;
     flex-direction: row;
+    padding: 3rem 0;
 }
 
 .text {
@@ -50,15 +58,17 @@
     composes: bar;
     background-color: rgb(76, 76, 76);
 }
+
 @media (min-width:768px) {
     .squre {
 
         width: 3vw;
         height: 3vw;
     }
+
     .text {
         margin-top: 1rem;
         font-size: 1.5vw;
-    padding:0 1vw;
+        padding: 0 1vw;
     }
 }

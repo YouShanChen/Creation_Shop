@@ -14,6 +14,7 @@
     position: relative;
     padding-top: 3rem;
     padding-right: 1rem;
+    align-items: flex-start;
 }
 
 .imgBox {
@@ -88,16 +89,19 @@
 
 @media (min-width: 1280px) {
     .img1 {
-        height: 12rem;
+        height: 10rem;
+        margin:0 1rem;
     }
 
     .img2 {
         display: block;
-        height: 12rem;
+        height: 10rem;
+        margin:0 1rem;
     }
 
     .img3 {
         display: block;
-        height: 12rem;
+        height: 10rem;
+        margin:0 1rem;
     }
 }
