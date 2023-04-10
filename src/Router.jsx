@@ -9,7 +9,7 @@ import Category from './pages/Category';
 import Comission from './pages/Comission';
 import { darkTheme,lightTheme } from './theme';
 import OrderComission from './pages/OrderComission';
-import { selectLightMode } from "./redux/colorSLice";
+import { selectLightMode } from "./redux/colorSlice";
 function Router() {
   const lightMode = useSelector(selectLightMode);
   const theme = lightMode ? lightTheme : darkTheme;
