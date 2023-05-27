@@ -6,6 +6,7 @@ import './App.css';
 import Router from './Router';
 import { persistor, store } from './redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
+
 function App() {
 
   return (

@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./header.module.css";
 import NavBar from "../NavBar";
 import HamburgerMenu from "../HamburgerMenu";
-
+import SetColorMode from "../SetColorMode";
 export default function Header({ title }) {
 
     const [isOnTouch, setIsOnTouch] = useState(false);
@@ -19,6 +19,7 @@ export default function Header({ title }) {
                         isOnTouch={isOnTouch}
                     />
                 </div>
+                <SetColorMode/>
 
 
             </div>
