@@ -7,12 +7,12 @@ import styles from "./collectionmodal.module.css"
 
 import { selectCollectionItems } from "../../redux/collectionSlice";
 export default function CollectionModal() {
-   const { token: { colorBgBase,colorPrimary } } = theme.useToken();
+   const { token: { colorBgBase,colorPrimary,colorOrder } } = theme.useToken();
 
    const dispatch = useDispatch();
    const collectionItems = useSelector(selectCollectionItems);
    return (
-      <div className={styles.box}>
+      <div className={styles.box} style={{backgroundColor:colorOrder}}>
 
          {collectionItems.length === 0 ? (
             <div className={styles.notification} >Collection is empty</div>

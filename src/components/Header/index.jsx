@@ -18,8 +18,9 @@ export default function Header({ title }) {
                         onClick={() => setIsOnTouch(!isOnTouch)}
                         isOnTouch={isOnTouch}
                     />
+                    <SetColorMode/>
                 </div>
-                <SetColorMode/>
+
 
 
             </div>

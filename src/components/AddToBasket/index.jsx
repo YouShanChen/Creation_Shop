@@ -1,11 +1,13 @@
-import { Button, notification } from "antd"
+import { theme,Button, notification } from "antd"
 import { useDispatch } from "react-redux";
 import { addCartItems } from "../../redux/cartSlice";
 import styles from "./addtobasket.module.css"
 
 export default function AddToCart({ comission }) {
     const dispatch = useDispatch();
-  
+    const {
+      token: {colorDetailTitle },
+  } = theme.useToken();
     const openNotification = () => {
       notification.open({
         message: "通知",
@@ -33,7 +35,7 @@ export default function AddToCart({ comission }) {
     };
   
     return (
-      <Button type="primary" className={styles.btn} onClick={addToCart}>
+      <Button type="primary" className={styles.btn} onClick={addToCart} style={{backgroundColor:colorDetailTitle}}>
         發起委託
       </Button>
     );

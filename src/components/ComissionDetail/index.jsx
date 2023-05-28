@@ -4,10 +4,10 @@ import AddToCollection from "../AddToCollection"
 import styles from "./comissiondetail.module.css"
 function ComissionDetail({ comission }) {
     const {
-        token: { colorPrimary, colorBgBase,colorTextBase,colorItem,colorNavItem},
+        token: { colorPrimary, colorBgBase,colorDetail,colorProductDetail,colorDetailTitle},
     } = theme.useToken();
     return (
-        <div className={styles.box}>
+        <div className={styles.box} style={{backgroundColor:colorBgBase}}>
             <div className={styles.upBox}>
                 <div className={styles.imageBox}>
                     <img
@@ -27,7 +27,7 @@ function ComissionDetail({ comission }) {
                     <AddToCollection comission={comission} />
                 </div>
 
-                <div className={styles.detail}>
+                <div className={styles.detail} style={{color:colorDetail}}>
                     <div className={styles.info}>
                         <h2 className={styles.category}>
                             {comission.category}
@@ -54,8 +54,8 @@ function ComissionDetail({ comission }) {
                     </div>
                 </div>
             </div>
-            <div className={styles.underBox} >
-                <div className={styles.noticeTitle}>委託須知</div>
+            <div className={styles.underBox} style={{backgroundColor:colorProductDetail}}>
+                <div className={styles.noticeTitle} style={{backgroundColor:colorDetailTitle}}>委託須知</div>
                 <div className={styles.noticeSubTitle}>(發起委託即代表同意並接受以下內容)</div>
                 <div className={styles.noticeItem}>1. 採不朔既往原則</div>
                 <div className={styles.noticeText}>每單委託所適用的規則為交易成立當下(確認已繳畢訂金)的規則，若在交件前規則有產生更改，該單委託則繼續使用更改前的規則而非更改後的規則。</div>

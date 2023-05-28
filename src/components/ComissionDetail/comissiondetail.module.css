@@ -89,6 +89,7 @@ font-weight: bold;
 
 .btn {
    align-self: center;
+   padding-bottom: 3rem;
 }
 .underBox{
    display: flex;

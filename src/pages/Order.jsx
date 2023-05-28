@@ -6,7 +6,7 @@ import BasketModal from "../components/BasketModal"
 
 function Order() {
   const {
-    token: { colorPrimary,colorBgBase, colorTextBase },
+    token: { colorPrimary,colorBgBase, colorTextBase},
   } = theme.useToken();
   const title = "Order";
     return (

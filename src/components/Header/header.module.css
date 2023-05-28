@@ -14,7 +14,11 @@
   margin: 0;
   font-family:Amatic SC;
 }
-
+.headerFunction{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 @media (min-width: 576px) {
   .headerTitle {
     font-size: 2.4rem;

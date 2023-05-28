@@ -1,18 +1,23 @@
 import styles from "./icons.module.css"
 import { Button } from "antd"
-export function Sun({ color, background }) {
+export function Sun({ background }) {
    return (
 
-      <Button type="link" styles={{ color: color, backgroundColor: background }}>
-         Light
+      <Button styles={{ backgroundColor: background }}>
+         <p style={{ color: "#000000" }}>
+            Light
+         </p>
+
       </Button>
    );
 }
 
-export function Moon({ color, background }) {
+export function Moon({ background }) {
    return (
-      <Button type="link" styles={{ color: color, backgroundColor: background }}>
-      Dark
-   </Button>
+      <Button styles={{ backgroundColor: background }}>
+         <p style={{ color: "#ffffff" }}>
+            Dark
+         </p>
+      </Button>
    );
 }

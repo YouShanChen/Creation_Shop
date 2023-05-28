@@ -3,18 +3,18 @@ import { Row, Col ,theme} from "antd";
 
 export default function CreatorList() {
     const {
-        token: { colorPrimary},
+        token: { colorCreatorList,colorCreator},
     } = theme.useToken();
     return (
 
-        <div className={styles.box}>
+        <div className={styles.box} style={{backgroundColor:colorCreatorList}}>
             <p className={styles.creatorTitle} >
                 熱門創作者
             </p>
             <Row justify="space-around" gutter={[{ xs: 12, sm: 12, md: 24, lg: 128 }, 5]}>
                 <Col span={8} >
 
-                    <div className={styles.creatorItem}>
+                    <div className={styles.creatorItem} style={{backgroundColor:colorCreator}}>
 
                         <img src="/images/icon.png" alt="icon" className={styles.creatorImage} />
 
@@ -28,7 +28,7 @@ export default function CreatorList() {
                     </div>
                 </Col>
                 <Col span={8} >
-                    <div className={styles.creatorItem}>
+                    <div className={styles.creatorItem} style={{backgroundColor:colorCreator}}>
 
                         <img src="/images/unknownicon.png" alt="icon" className={styles.creatorImage} />
 
@@ -40,7 +40,7 @@ export default function CreatorList() {
                     </div>
                 </Col>
                 <Col span={8} >
-                    <div className={styles.creatorItem}>
+                    <div className={styles.creatorItem} style={{backgroundColor:colorCreator}}>
 
                         <img src="/images/unknownicon.png" alt="icon" className={styles.creatorImage} />
 

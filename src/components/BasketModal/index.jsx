@@ -7,12 +7,12 @@ import styles from "./basketmodal.module.css"
 
 import { selectCartItems } from "../../redux/cartSlice";
 export default function BasketModal() {
-   const { token: { colorBgBase,colorTextBase, colorPrimary } } = theme.useToken();
+   const { token: { colorBgBase,colorTextBase, colorPrimary ,colorOrder} } = theme.useToken();
 
    const dispatch = useDispatch();
    const cartItems = useSelector(selectCartItems);
    return (
-      <div className={styles.box} >
+      <div className={styles.box} style={{backgroundColor:colorOrder}}>
 
          {cartItems.length === 0 ? (
             <div className={styles.notification} >Cart is empty</div>

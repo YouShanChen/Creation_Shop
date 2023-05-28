@@ -44,7 +44,7 @@ export default function NavBar({ open, onClose }) {
             </div>
             <Drawer 
                 title="Creation Shop" 
-                placement="right" 
+                placement="left" 
                 onClose={onClose} 
                 open={open} 
                 style={{backgroundColor:colorNavItem}}

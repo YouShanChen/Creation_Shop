@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     padding: 1em;
-    background-color:rgb(57,115,127) ;
+
 }
 
 .tagTitle {
@@ -17,7 +17,7 @@
 .tagItem {
     padding: 0.5rem 0;
     text-align: center;
-    background-color: #44d4d4c2;
+    background-color: #218484c2;
     border-radius: 3rem;
     font-size: 1.2rem;
 }

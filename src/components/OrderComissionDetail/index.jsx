@@ -1,7 +1,9 @@
 import styles from "./ordercomissiondetail.module.css"
+import { theme } from "antd";
 function OrderComissionDetail({ comission }) {
+    const { token: { colorBgBase,colorPrimary,colorDetail} } = theme.useToken();
     return (
-        <div className={styles.box}>
+        <div className={styles.box} style={{backgroundColor:colorBgBase}}>
             <div className={styles.imageBox}>
                 <img
                     className={styles.image1}
@@ -20,7 +22,7 @@ function OrderComissionDetail({ comission }) {
                 
             </div>
 
-            <div className={styles.detail}>
+            <div className={styles.detail} style={{color:colorDetail}}>
                 <div className={styles.info}>
                     <h2 className={styles.category}>
                         {comission.category}
