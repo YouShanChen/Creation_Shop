@@ -18,7 +18,10 @@
     transform: scale(1.1);
 }
 .notification{
-align-self: center;
+display: flex;
+flex-direction: row;
+padding-top: 5rem;
+justify-content: center;
  }
 .img1 {
     display: block;

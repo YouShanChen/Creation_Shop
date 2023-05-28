@@ -1,10 +1,10 @@
-.box{
+.box {
     background-color: #408492;
     min-height: 100vh;
 
 }
 
-.itemBox{
+.itemBox {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -13,13 +13,18 @@
     margin: 1rem;
     position: relative;
 }
-.itemBox:hover
-{
+
+.itemBox:hover {
     transform: scale(1.1);
 }
-.notification{
-align-self: center;
- }
+
+.notification {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5rem;
+    justify-content: center;
+}
+
 .img1 {
     display: block;
     height: 15rem;
@@ -42,6 +47,7 @@ align-self: center;
     object-fit: contain;
     display: none;
 }
+
 .info {
     display: flex;
     flex-direction: column;
@@ -71,12 +77,13 @@ align-self: center;
     z-index: 9;
     font-size: 1rem;
 }
+
 .delete {
     font-size: 1.2rem;
     text-align: right;
     cursor: pointer;
     color: rgb(255, 255, 255);
     position: absolute;
-    top:0.5rem;
-    right:1rem;
-  }
+    top: 0.5rem;
+    right: 1rem;
+}

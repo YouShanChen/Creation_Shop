@@ -9,7 +9,10 @@ import {
     getDocs,
     deleteDoc,
     query,
-    where, } from "firebase/firestore";
+    where,
+    initializeFirestore,
+    enableIndexedDbPersistence
+  } from "firebase/firestore";
 import comissions from "../json/comissions.json";
 
 
@@ -28,7 +31,21 @@ const app_length = getApps().length > 0;
 const app = app_length ? getApp() : initializeApp(firebaseConfig);
 
 // REFERENCE DB
-const db = getFirestore(app);
+const db = app_length ? getFirestore(app) : initializeFirestore(app, { experimentalForceLongPolling: true, });
+
+enableIndexedDbPersistence(db)
+    .then(() => console.log("Enabled offline persistence"))
+    .catch((error) => {
+      if (error.code == "failed-precondition") {
+        // Multiple tabs open, persistence can only be enabled
+        // in one tab at a a time.
+        // ...
+      } else if (error.code == "unimplemented") {
+        // The current browser does not support all of the
+        // features required to enable persistence
+        // ...
+      }
+    });
 
 // REFERENCE COLLECTION
 const comissionsCollection = collection(db, "comissions"); 
