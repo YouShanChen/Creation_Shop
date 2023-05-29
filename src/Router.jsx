@@ -10,6 +10,7 @@ import Comission from './pages/Comission';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
+import MyWork from './pages/MyWork';
 import { darkTheme,lightTheme } from './theme';
 import OrderComission from './pages/OrderComission';
 import { selectLightMode } from "./redux/colorSlice";
@@ -34,6 +35,7 @@ function Router() {
               <Route path="login" element={<Login />} />
               <Route path="register" element={<Register />} />
               <Route path="profile" element={<Profile />} />
+              <Route path="mywork" element={<MyWork />} />
             </Route>
             </Routes>
           </BrowserRouter>

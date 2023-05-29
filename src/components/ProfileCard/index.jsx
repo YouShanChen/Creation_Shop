@@ -1,13 +1,13 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { theme,Form, Input, Button } from "antd";
+import { Link, useNavigate } from "react-router-dom";
+import { theme, Form, Input, Button } from "antd";
 import styles from "./profilecard.module.css"
 import { useUpdateProfile, useLogout, useUserInfo } from "../../react-query";
 
 const ProfileCard = ({ redirect }) => {
   const {
-    token: { colorButton,colorForm },
- } = theme.useToken();
+    token: { colorButton, colorForm },
+  } = theme.useToken();
   const { data: userInfo } = useUserInfo() || {};
   const update = useUpdateProfile();
   const logout = useLogout();
@@ -35,7 +35,7 @@ const ProfileCard = ({ redirect }) => {
       className={styles.profileForm}
       form={form}
       initialValues={userInfo}
-      style={{backgroundColor:colorForm}}
+      style={{ backgroundColor: colorForm }}
     >
       <div className={styles.title}>Profile</div>
       <Form.Item
@@ -51,7 +51,7 @@ const ProfileCard = ({ redirect }) => {
           },
         ]}
       >
-        <Input placeholder={userInfo.name} style={{color:colorButton}}/>
+        <Input placeholder={userInfo.name} style={{ color: colorButton }} />
       </Form.Item>
       <Form.Item
         label="身分: "
@@ -66,7 +66,7 @@ const ProfileCard = ({ redirect }) => {
           },
         ]}
       >
-        <Input placeholder={userInfo.property} style={{color:colorButton}}/>
+        <Input placeholder={userInfo.property} style={{ color: colorButton }} />
       </Form.Item>
       <Form.Item
         label="地址: "
@@ -81,7 +81,7 @@ const ProfileCard = ({ redirect }) => {
           },
         ]}
       >
-        <Input placeholder={userInfo?.adrs || ""} style={{color:colorButton}}/>
+        <Input placeholder={userInfo?.adrs || ""} style={{ color: colorButton }} />
       </Form.Item>
       <Form.Item
         label="電話: "
@@ -96,13 +96,23 @@ const ProfileCard = ({ redirect }) => {
           },
         ]}
       >
-        <Input placeholder={userInfo?.tel || 'xxxx-xxxxxx'} style={{color:colorButton}}/>
+        <Input placeholder={userInfo?.tel || 'xxxx-xxxxxx'} style={{ color: colorButton }} />
       </Form.Item>
 
       <Form.Item>
         <Button
           type="primary"
+          className={styles.profileForm__button}
+        >
+          <Link className={styles.profileForm__gotowork} to={"/auth/mywork"} >
+            Go to My Work
+          </Link>
+        </Button>
+
+        <Button
+          type="primary"
           htmlType="submit"
+          style={{ marginTop: "1rem" }}
           className={styles.profileForm__button}
         >
           Submit

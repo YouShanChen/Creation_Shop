@@ -5,15 +5,24 @@
   border-radius: 10%;
   border-color: cadetblue;
   border: 0.5rem outset rgb(55, 71, 85);
-  }
-  .title{
-    font-size: 2rem;
-    padding-bottom: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: rgb(255, 255, 255);
-  }
-  .profileForm__button {
-    width: 100%;
-  }
+}
+
+.title {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+}
+
+.profileForm__button {
+  width: 100%;
+}
+
+.profileForm__gotowork {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

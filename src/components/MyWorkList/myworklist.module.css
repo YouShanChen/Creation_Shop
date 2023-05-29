@@ -3,7 +3,10 @@
     min-height: 100vh;
 
 }
-
+.outerBox{
+    display: flex;
+    flex-direction: column;
+}
 .itemBox {
     display: flex;
     flex-direction: row;
@@ -19,11 +22,11 @@
 }
 
 .notification {
-font-size: 1.5rem;
     display: flex;
     flex-direction: row;
     padding-top: 5rem;
     justify-content: center;
+    font-size: 1.5rem;
 }
 
 .img1 {
@@ -87,4 +90,8 @@ font-size: 1.5rem;
     position: absolute;
     top: 0.5rem;
     right: 1rem;
+}
+.work__button{
+    align-self: center;
+    width: 50%;
 }
