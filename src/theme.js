@@ -19,6 +19,7 @@ const lightTheme = {
       colorItem:"#daf9ff",//物件顏色//
       colorButton:"#000000",//按鈕反轉色//
       colorDetail:"#39737f",//委託詳情文字
+      colorForm:"#a8a8a8ac",//表單背景
       colorNavItem:"#000000",
       colorTextFooter: "#ffffff",
       colorBgFooter: "#000000",
@@ -52,6 +53,7 @@ const lightTheme = {
       colorItem:"#daf9ff",//物件顏色//
       colorButton:"#ffffff",//按鈕反轉色//
       colorDetail:"#ffffff",//委託詳情文字
+      colorForm:"#424242c5",//表單背景
       colorNavItem:"#000000",
       colorTextFooter: "#ffffff",
       colorBgFooter: "#000000"

@@ -1,10 +1,13 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Form, Input, Button } from "antd";
+import { theme,Form, Input, Button } from "antd";
 import styles from "./profilecard.module.css"
 import { useUpdateProfile, useLogout, useUserInfo } from "../../react-query";
 
 const ProfileCard = ({ redirect }) => {
+  const {
+    token: { colorButton,colorForm },
+ } = theme.useToken();
   const { data: userInfo } = useUserInfo() || {};
   const update = useUpdateProfile();
   const logout = useLogout();
@@ -32,7 +35,9 @@ const ProfileCard = ({ redirect }) => {
       className={styles.profileForm}
       form={form}
       initialValues={userInfo}
+      style={{backgroundColor:colorForm}}
     >
+      <div className={styles.title}>Profile</div>
       <Form.Item
         label="姓名: "
         name="name"
@@ -46,7 +51,22 @@ const ProfileCard = ({ redirect }) => {
           },
         ]}
       >
-        <Input placeholder={userInfo.name} />
+        <Input placeholder={userInfo.name} style={{color:colorButton}}/>
+      </Form.Item>
+      <Form.Item
+        label="身分: "
+        name="property"
+        rules={[
+          {
+            type: "string",
+            message: "並非有效的身分!",
+          },
+          {
+            message: "請輸入你的身分!",
+          },
+        ]}
+      >
+        <Input placeholder={userInfo.property} style={{color:colorButton}}/>
       </Form.Item>
       <Form.Item
         label="地址: "
@@ -61,7 +81,7 @@ const ProfileCard = ({ redirect }) => {
           },
         ]}
       >
-        <Input placeholder={userInfo?.adrs || ""} />
+        <Input placeholder={userInfo?.adrs || ""} style={{color:colorButton}}/>
       </Form.Item>
       <Form.Item
         label="電話: "
@@ -76,7 +96,7 @@ const ProfileCard = ({ redirect }) => {
           },
         ]}
       >
-        <Input placeholder={userInfo?.tel || 'xxxx-xxxxxx'} />
+        <Input placeholder={userInfo?.tel || 'xxxx-xxxxxx'} style={{color:colorButton}}/>
       </Form.Item>
 
       <Form.Item>

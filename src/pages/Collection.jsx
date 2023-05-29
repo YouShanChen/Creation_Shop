@@ -5,7 +5,7 @@ import Footer from "../components/Footer"
 import CollectionModal from "../components/CollectionModal"
 function Collection() {
   const {
-    token: { colorPrimary, colorBgBase, colorTextBase },
+    token: { colorPrimary, colorBgBase, colorText },
   } = theme.useToken();
   const title = "Collection";
     return (
@@ -16,7 +16,7 @@ function Collection() {
         <style>{`
             body { 
               background-color: ${colorPrimary}; 
-              color: ${colorTextBase}
+              color: ${colorText}
             }
         `}</style>
       </Helmet>

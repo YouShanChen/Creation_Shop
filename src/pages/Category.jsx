@@ -8,7 +8,7 @@ import comissions from "../json/comissions.json";
 import ComissionListTitle from "../components/ComissionListTitle";
 function Category() {
   const {
-    token: { colorPrimary, colorBgBase, colorTextBase },
+    token: { colorPrimary, colorBgBase, colorText },
   } = theme.useToken();
   const { categoryName } = useParams();
   const _comissions = comissions.filter(
@@ -23,7 +23,7 @@ function Category() {
         <style>{`
             body { 
               background-color: ${colorPrimary}; 
-              color: ${colorTextBase}
+              color: ${colorText}
             }
         `}</style>
       </Helmet>

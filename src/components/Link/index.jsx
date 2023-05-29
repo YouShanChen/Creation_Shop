@@ -3,12 +3,12 @@ import { theme } from "antd"
 
 export default function (props) {
    const {
-      token: { colorTextBase },
+      token: { colorText},
     } = theme.useToken();
    return (
       <Link {...props} style ={{
          textDecoration: 'none',
-         color: colorTextBase,
+         color: colorText,
       }}>
          {props.children}
       </Link>

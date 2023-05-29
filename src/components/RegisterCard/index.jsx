@@ -7,7 +7,7 @@ import styles from "./registercard.module.css"
 
 const RegisterCard = ({ redirect }) => {
   const {
-    token: { colorButton },
+    token: { colorButton,colorForm},
  } = theme.useToken();
   const { mutate, error, isLoading, isError, isSuccess, data } = useRegisterWithEmailPassword();
   const [form] = Form.useForm();
@@ -23,7 +23,9 @@ const RegisterCard = ({ redirect }) => {
       onFinish={onFinish}
       className={styles.registerForm}
       scrollToFirstError
+      style={{backgroundColor:colorForm}}
     >
+      <div className={styles.title}>Register</div>
       <Form.Item
         name="name"
         label="Your Name"
@@ -36,7 +38,7 @@ const RegisterCard = ({ redirect }) => {
           },
         ]}
       >
-        <Input />
+        <Input style={{color:colorButton}}/>
       </Form.Item>
       <Form.Item
         name="email"
@@ -52,7 +54,7 @@ const RegisterCard = ({ redirect }) => {
           },
         ]}
       >
-        <Input />
+        <Input style={{color:colorButton}}/>
       </Form.Item>
 
       <Form.Item
@@ -66,7 +68,7 @@ const RegisterCard = ({ redirect }) => {
         ]}
         hasFeedback
       >
-        <Input.Password />
+        <Input.Password style={{color:colorButton}}/>
       </Form.Item>
 
       <Form.Item
@@ -92,7 +94,7 @@ const RegisterCard = ({ redirect }) => {
           }),
         ]}
       >
-        <Input.Password />
+        <Input.Password style={{color:colorButton}}/>
       </Form.Item>
 
       <Form.Item
@@ -108,7 +110,7 @@ const RegisterCard = ({ redirect }) => {
         ]}
       >
         <Checkbox>
-          I have read the <Link to={"/"}>agreement</Link>
+          I have read the <Link to={"/"} >agreement</Link>
         </Checkbox>
       </Form.Item>
       <Form.Item>

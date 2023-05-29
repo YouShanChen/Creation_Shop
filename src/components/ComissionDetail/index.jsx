@@ -35,7 +35,7 @@ function ComissionDetail({ comission }) {
                             src={comission.image3}
                             alt={comission.name} />
                     </div>
-                    <AddToCollection comission={comission} />
+                    <AddToCollection onClick={toggleFavorite } comission={comission} />
                 </div>
 
                 <div className={styles.detail} style={{color:colorDetail}}>

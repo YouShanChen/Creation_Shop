@@ -7,7 +7,7 @@ import LoginCard from '../components/LoginCard';
 
 function Login() {
    const {
-      token: { colorPrimary, colorTextBase,colorOrder  },
+      token: { colorPrimary, colorText,colorOrder  },
    } = theme.useToken();
    const [searchParams] = useSearchParams();
    const redirect = searchParams.get('redirect');
@@ -15,11 +15,11 @@ function Login() {
    return (
       <div className="mainLayout">
          <Helmet>
-            <title>login</title>
+            <title>Login</title>
             <style>{`
                body { 
                   background-color: ${colorPrimary}; 
-                  color: ${colorTextBase}
+                  color: ${colorText}
                }
             `}</style>
          </Helmet>

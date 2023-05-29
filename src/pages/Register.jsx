@@ -6,17 +6,17 @@ import RegisterCard from '../components/RegisterCard';
 
 function Register() {
    const {
-      token: { colorPrimary, colorTextBase,colorOrder  },
+      token: { colorPrimary, colorText,colorOrder  },
    } = theme.useToken();
 
    return (
       <div className="mainLayout">
          <Helmet>
-            <title>register</title>
+            <title>Register</title>
             <style>{`
                body { 
                   background-color: ${colorPrimary}; 
-                  color: ${colorTextBase}
+                  color: ${colorText}
                }
             `}</style>
          </Helmet>

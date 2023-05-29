@@ -6,7 +6,7 @@ import TagList from "../components/TagList"
 import CreatorList from "../components/CreatorList"
 function Home() {
   const {
-    token: { colorPrimary,colorBgBase, colorTextBase },
+    token: { colorPrimary,colorBgBase, colorText },
   } = theme.useToken();
   const title = "Creation Shop";
   return (
@@ -17,7 +17,7 @@ function Home() {
         <style>{`
             body { 
               background-color: ${colorPrimary}; 
-              color: ${colorTextBase}
+              color: ${colorText}
             }
         `}</style>
       </Helmet>

@@ -29,7 +29,7 @@ export const useComissions = () => {
  export const useToggleFavoriteProduct = () => {
   const queryClient = useQueryClient();
   return useMutation(toggleFavoriteProduct, {
-    onSuccess: (data) => {
+    onSuccess: () => {
       queryClient.invalidateQueries(["uid"]);
     },
   });

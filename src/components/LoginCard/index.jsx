@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { theme,Form, Input, Button, Checkbox } from 'antd';
+import {Form, Input, Button, Checkbox,theme } from 'antd';
 import { WarningOutlined, MailOutlined, LockOutlined } from '@ant-design/icons';
 import { useSignInWithEmailPassword } from "../../react-query";
 import styles from './logincard.module.css';
 
 const LoginCard = ({ redirect }) => {
     const {
-        token: { colorButton },
+        token: { colorButton,colorForm},
      } = theme.useToken();
 
     const { mutate, error, isLoading, isError, isSuccess, data } = useSignInWithEmailPassword();
@@ -35,7 +35,9 @@ const LoginCard = ({ redirect }) => {
                 isRemember: true,
             }}
             onFinish={onFinish}
+            style={{backgroundColor:colorForm}}
         >
+            <div className={styles.title}>Login</div>
             <Form.Item
                 name="email"
                 rules={[
@@ -49,16 +51,11 @@ const LoginCard = ({ redirect }) => {
                     },
                 ]}
                 hasFeedback
-                placeholderStyle={{backgroundColor:colorButton}}
             >
-                <p>E-Mail</p>
                 <Input
-                    prefix={<MailOutlined />}
+                    prefix={<MailOutlined style={{color:colorButton}}/>}
                     placeholder="E-Mail"
-                    placeholderStyle={{color:colorButton}}
-                    style={{color:colorButton}}
-
-                />
+                    />
             </Form.Item>
             <Form.Item
                 name="password"
@@ -70,11 +67,11 @@ const LoginCard = ({ redirect }) => {
                 ]}
                 hasFeedback
             >
-                <p>Password</p>
                 <Input.Password
                     prefix={<LockOutlined />}
                     type="password"
                     placeholder="Password"
+                    style={{color:colorButton}}
                 />
             </Form.Item>
             <Form.Item>

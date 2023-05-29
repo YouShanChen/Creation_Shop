@@ -162,10 +162,11 @@ export const register = async ({ name, email, password }) => {
   });
 };
 
-export const updateUserInfo = async ({ name, adrs, tel, uid }) => {
+export const updateUserInfo = async ({ name, property,adrs, tel, uid }) => {
   const docRef = doc(db, "users", uid);
   await updateDoc(docRef, {
     name,
+    property,
     adrs,
     tel,
   });

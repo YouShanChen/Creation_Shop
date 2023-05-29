@@ -6,7 +6,7 @@ import BasketModal from "../components/BasketModal"
 
 function Order() {
   const {
-    token: { colorPrimary,colorBgBase, colorTextBase},
+    token: { colorPrimary,colorBgBase, colorText},
   } = theme.useToken();
   const title = "Order";
     return (
@@ -17,7 +17,7 @@ function Order() {
         <style>{`
             body { 
               background-color: ${colorPrimary}; 
-              color: ${colorTextBase}
+              color: ${colorText}
             }
         `}</style>
       </Helmet>

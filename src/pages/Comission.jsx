@@ -8,7 +8,7 @@ import comissions from "../json/comissions.json";
 
 function Comission(){
    const {
-      token: { colorPrimary, colorTextBase },
+      token: { colorPrimary, colorText },
     } = theme.useToken();
     const { comissionId } = useParams();
     const comission = comissions.find(
@@ -22,7 +22,7 @@ function Comission(){
         <style>{`
             body { 
               background-color: ${colorPrimary}; 
-              color: ${colorTextBase}
+              color: ${colorText}
             }
         `}</style>
       </Helmet>

@@ -6,17 +6,17 @@ import ProfileCard from '../components/ProfileCard';
 
 function Profile() {
    const {
-      token: { colorPrimary, colorTextBase,colorOrder },
+      token: { colorPrimary, colorText,colorOrder },
    } = theme.useToken();
 
    return (
       <div className="mainLayout">
          <Helmet>
-            <title>profile</title>
+            <title>Profile</title>
             <style>{`
                body { 
                   background-color: ${colorPrimary}; 
-                  color: ${colorTextBase}
+                  color: ${colorText}
                }
             `}</style>
          </Helmet>
