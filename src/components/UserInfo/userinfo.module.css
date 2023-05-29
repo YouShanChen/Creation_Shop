@@ -1,12 +1,15 @@
 .userInfo {
     cursor: pointer;
     display: none;
+    flex-direction: column;
+    justify-content: center;
   }
   
   .userInfoText {
     font-size: 1rem;
     opacity: 0.6;
     margin-top: -0.2rem;
+    justify-self: center;
   }
   
   .userInfoOutlined {

@@ -6,6 +6,7 @@
 .outerBox{
     display: flex;
     flex-direction: column;
+    margin:2rem 0;
 }
 .itemBox {
     display: flex;
