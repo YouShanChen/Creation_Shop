@@ -3,7 +3,7 @@ import { Button } from "antd"
 export function Sun({ background }) {
    return (
 
-      <Button styles={{ backgroundColor: background }}>
+      <Button className={styles.button} styles={{ backgroundColor: background }}>
          <p style={{ color: "#000000" }}>
             Light
          </p>
@@ -14,7 +14,7 @@ export function Sun({ background }) {
 
 export function Moon({ background }) {
    return (
-      <Button styles={{ backgroundColor: background }}>
+      <Button className={styles.button} styles={{ backgroundColor: background }}>
          <p style={{ color: "#ffffff" }}>
             Dark
          </p>

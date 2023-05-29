@@ -6,7 +6,7 @@ import ProfileCard from '../components/ProfileCard';
 
 function Profile() {
    const {
-      token: { colorBgBase, colorTextBase },
+      token: { colorPrimary, colorTextBase,colorOrder },
    } = theme.useToken();
 
    return (
@@ -15,7 +15,7 @@ function Profile() {
             <title>profile</title>
             <style>{`
                body { 
-                  background-color: ${colorBgBase}; 
+                  background-color: ${colorPrimary}; 
                   color: ${colorTextBase}
                }
             `}</style>
@@ -25,6 +25,11 @@ function Profile() {
             title="Profile"
          />
          <div className="layoutContent container">
+         <style>{`
+            .layoutContent { 
+              background-color: ${colorOrder}; 
+            }
+        `}</style>
             <ProfileCard />
          </div>
          <Footer className="layoutFooter" />

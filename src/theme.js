@@ -5,7 +5,8 @@ const lightTheme = {
     token: {
       colorPrimary: "#408492",//header跟footer//
       colorBgBase	: "#ffffff",//content背景//
-      colorTextBase: "#ffffff",//文字顏色//
+      colorTextBase: "#000000",//預設文字顏色//
+      colorText:"#ffffff",//其他文字顏色
       colorOrder:"#408492",//order背景
       colorTagList:"#39737f",//tag背景
       colorTag:"#44d4d4c2",//tag顏色
@@ -37,6 +38,7 @@ const lightTheme = {
       colorPrimary: "#222222",//header跟footer//
       colorBgBase	: "#303030",//content背景//
       colorTextBase: "#ffffff",//文字顏色//
+      colorText:"#ffffff",//其他文字顏色
       colorOrder:"#303030",//order背景
       colorTagList:"#242424",//tag背景
       colorTag:"#218484c2",//tag顏色

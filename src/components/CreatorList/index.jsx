@@ -3,11 +3,11 @@ import { Row, Col, theme,} from "antd";
 
 export default function CreatorList() {
     const {
-        token: { colorCreatorList, colorCreator },
+        token: { colorCreatorList, colorCreator ,colorText},
     } = theme.useToken();
     return (
 
-        <div className={styles.box} style={{ backgroundColor: colorCreatorList }}>
+        <div className={styles.box} style={{ backgroundColor: colorCreatorList,color:colorText }}>
             <p className={styles.creatorTitle} >
                 熱門創作者
             </p>

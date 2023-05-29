@@ -7,7 +7,7 @@ import LoginCard from '../components/LoginCard';
 
 function Login() {
    const {
-      token: { colorPrimary,colorBgBase, colorTextBase,colorOrder  },
+      token: { colorPrimary, colorTextBase,colorOrder  },
    } = theme.useToken();
    const [searchParams] = useSearchParams();
    const redirect = searchParams.get('redirect');

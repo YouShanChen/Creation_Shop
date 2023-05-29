@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import { Form, Input, Checkbox, Button } from "antd";
+import { theme,Form, Input, Checkbox, Button } from "antd";
 import { WarningOutlined } from "@ant-design/icons";
 import { useRegisterWithEmailPassword } from "../../react-query";
 import styles from "./registercard.module.css"
 
 const RegisterCard = ({ redirect }) => {
-
-    const { mutate, error, isLoading, isError, isSuccess, data } = useRegisterWithEmailPassword();
+  const {
+    token: { colorButton },
+ } = theme.useToken();
+  const { mutate, error, isLoading, isError, isSuccess, data } = useRegisterWithEmailPassword();
   const [form] = Form.useForm();
   const onFinish = (values) => {
     console.log("Received values of form: ", values);

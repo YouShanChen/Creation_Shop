@@ -6,7 +6,7 @@ import RegisterCard from '../components/RegisterCard';
 
 function Register() {
    const {
-      token: { colorBgBase, colorTextBase },
+      token: { colorPrimary, colorTextBase,colorOrder  },
    } = theme.useToken();
 
    return (
@@ -15,7 +15,7 @@ function Register() {
             <title>register</title>
             <style>{`
                body { 
-                  background-color: ${colorBgBase}; 
+                  background-color: ${colorPrimary}; 
                   color: ${colorTextBase}
                }
             `}</style>
@@ -25,6 +25,11 @@ function Register() {
             title="Register"
          />
          <div className="layoutContent container">
+         <style>{`
+            .layoutContent { 
+              background-color: ${colorOrder}; 
+            }
+        `}</style>
             <RegisterCard />
          </div>
          <Footer className="layoutFooter" />

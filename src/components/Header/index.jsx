@@ -20,7 +20,7 @@ export default function Header({ title }) {
                         isOnTouch={isOnTouch}
                     />
                     <UserInfo className={styles.hideInMobile} />
-                    <SetColorMode/>
+                    <SetColorMode className={styles.hideInMobile} />
                 </div>
 
 

@@ -49,11 +49,15 @@ const LoginCard = ({ redirect }) => {
                     },
                 ]}
                 hasFeedback
+                placeholderStyle={{backgroundColor:colorButton}}
             >
+                <p>E-Mail</p>
                 <Input
                     prefix={<MailOutlined />}
                     placeholder="E-Mail"
+                    placeholderStyle={{color:colorButton}}
                     style={{color:colorButton}}
+
                 />
             </Form.Item>
             <Form.Item
@@ -66,6 +70,7 @@ const LoginCard = ({ redirect }) => {
                 ]}
                 hasFeedback
             >
+                <p>Password</p>
                 <Input.Password
                     prefix={<LockOutlined />}
                     type="password"

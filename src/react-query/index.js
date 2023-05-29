@@ -6,6 +6,7 @@ import {
    login, 
    register,
    getUserInfo,
+   toggleFavoriteProduct,
    updateUserInfo,
    logout,
   } from "../api";
@@ -25,6 +26,15 @@ export const useComissions = () => {
    return { data, isLoading };
  };
 
+ export const useToggleFavoriteProduct = () => {
+  const queryClient = useQueryClient();
+  return useMutation(toggleFavoriteProduct, {
+    onSuccess: (data) => {
+      queryClient.invalidateQueries(["uid"]);
+    },
+  });
+};
+
  export const useUserInfo = () => {
   return useQuery({
     queryKey: ["uid"],
@@ -33,13 +43,24 @@ export const useComissions = () => {
   });
 };
 
- export const useSignInWithEmailPassword = () => {
-  return useMutation(login);
+export const useSignInWithEmailPassword = () => {
+  const queryClient = useQueryClient();
+  return useMutation(login, {
+    onSuccess: () => {
+      queryClient.invalidateQueries(["uid"]);
+    },
+  });
 };
 
 export const useRegisterWithEmailPassword = () => {
-  return useMutation(register);
+  const queryClient = useQueryClient();
+  return useMutation(register, {
+    onSuccess: () => {
+      queryClient.invalidateQueries(["uid"]);
+    },
+  });
 };
+
 
 export const useUpdateProfile = () => {
   const queryClient = useQueryClient();

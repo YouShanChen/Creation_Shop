@@ -1,11 +1,22 @@
 import { theme} from "antd";
+import _ from 'lodash';
 import AddToBasket from "../AddToBasket"
 import AddToCollection from "../AddToCollection"
+import { useToggleFavoriteProduct, useUserInfo } from '../../react-query';
 import styles from "./comissiondetail.module.css"
 function ComissionDetail({ comission }) {
     const {
         token: { colorPrimary, colorBgBase,colorDetail,colorProductDetail,colorDetailTitle},
     } = theme.useToken();
+    const { mutate } = useToggleFavoriteProduct();
+    const { data: userInfo } = useUserInfo() || {};
+    const favorites = userInfo.favorites || [];
+    let isFavorite = _.includes(favorites, comission.id);
+    const toggleFavorite = () => {
+       if (!!userInfo?.uid)
+          mutate({ productId: comission.id, uid: userInfo?.uid })
+    }
+
     return (
         <div className={styles.box} style={{backgroundColor:colorBgBase}}>
             <div className={styles.upBox}>
@@ -49,7 +60,7 @@ function ComissionDetail({ comission }) {
                         <p className={styles.desTitle}>•付款分段：</p>
                         <p className={styles.des}>{comission.des4}</p>
                     </div>
-                    <div className={styles.btn}>
+                    <div onClick={toggleFavorite} className={styles.btn}>
                         <AddToBasket comission={comission} />
                     </div>
                 </div>

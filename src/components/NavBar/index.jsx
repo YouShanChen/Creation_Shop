@@ -6,7 +6,7 @@ import { selectCartItems } from "../../redux/cartSlice";
 import { selectCollectionItems } from "../../redux/collectionSlice";
 export default function NavBar({ open, onClose }) {
     const {
-        token: { colorNavItem },
+        token: { colorNavItem,colorText },
       } = theme.useToken();   
     const cartItems = useSelector(selectCartItems);
     const cartcount = (cartItems.length > 0)

@@ -3,7 +3,7 @@ import styles from "./comissionitem.module.css"
 import { theme} from "antd";
 export default function ComissionItem({ comission }) {
     const {
-        token: { colorPrimary, colorBgBase,colorTextBase,colorItem,colorNavItem},
+        token: { colorText},
     } = theme.useToken();
     return (
         <div className={styles.box}>
@@ -26,7 +26,7 @@ export default function ComissionItem({ comission }) {
             </Link>
            
             
-            <div className={styles.info} style={{color:colorTextBase}}>
+            <div className={styles.info} style={{color:colorText}}>
                 <h2 className={styles.category}>
                     {comission.category}
                 </h2>
