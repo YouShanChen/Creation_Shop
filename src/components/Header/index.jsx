@@ -3,6 +3,7 @@ import styles from "./header.module.css";
 import NavBar from "../NavBar";
 import HamburgerMenu from "../HamburgerMenu";
 import SetColorMode from "../SetColorMode";
+import UserInfo from "../UserInfo";
 export default function Header({ title }) {
 
     const [isOnTouch, setIsOnTouch] = useState(false);
@@ -18,6 +19,7 @@ export default function Header({ title }) {
                         onClick={() => setIsOnTouch(!isOnTouch)}
                         isOnTouch={isOnTouch}
                     />
+                    <UserInfo className={styles.hideInMobile} />
                     <SetColorMode/>
                 </div>
 

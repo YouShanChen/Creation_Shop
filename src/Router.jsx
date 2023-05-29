@@ -7,6 +7,9 @@ import Order from './pages/Order';
 import Collection from './pages/Collection';
 import Category from './pages/Category';
 import Comission from './pages/Comission';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Profile from './pages/Profile';
 import { darkTheme,lightTheme } from './theme';
 import OrderComission from './pages/OrderComission';
 import { selectLightMode } from "./redux/colorSlice";
@@ -27,6 +30,11 @@ function Router() {
                 <Route path="category/:categoryName" element={<Category />} />
                 <Route path="id/:comissionId" element={<Comission />} />
               </Route>
+              <Route path="auth">
+              <Route path="login" element={<Login />} />
+              <Route path="register" element={<Register />} />
+              <Route path="profile" element={<Profile />} />
+            </Route>
             </Routes>
           </BrowserRouter>
         </HelmetProvider>
